@@ -2,11 +2,11 @@
 kong_admin_listen: http://kong:8001
 
 imagepullsecrets: ""
-dockerhub: docker.io
+dockerhub: ""
 
 replicaCount: 1
-repository: python
-image_tag:  2.7.18
+repository: ""
+image_tag:  ""
 
 resources:
   requests:
