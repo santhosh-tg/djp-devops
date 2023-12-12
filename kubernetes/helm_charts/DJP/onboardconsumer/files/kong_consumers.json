@@ -1,0 +1,9 @@
+[
+    {
+        "groups": [
+            "testAdmin"
+        ],
+        "state": "present",
+        "username": "adi-admin"
+    }
+]
