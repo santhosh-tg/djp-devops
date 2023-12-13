@@ -19,9 +19,9 @@ pipeline {
                 script {
                         jobName = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-1].trim().toLowerCase()
                         currentWs = sh(returnStdout: true, script: 'pwd').trim()
-                        chart_path = "${currentWs}/kubernetes/helm_charts/VABots/$jobName"
-                        values_file = "${currentWs}/private_repo/ansible/inventory/dev/VABots/${jobName}_values.yaml"
-                        sh "helm upgrade --install $jobName $chart_path --namespace  $vabots_namespace --kubeconfig  $kubeconfig_path -f $values_file"
+                        chart_path = "${currentWs}/kubernetes/helm_charts/DJP/$jobName"
+                        values_file = "${currentWs}/private_repo/ansible/inventory/dev/DJP/${jobName}_values.yaml"
+                        sh "helm upgrade --install $jobName $chart_path --namespace  $djp_namespace --kubeconfig  $kubeconfig_path -f $values_file"
                 }
             }
         }
