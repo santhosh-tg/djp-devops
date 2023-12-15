@@ -1,4 +1,4 @@
-### Default variable file for kathaasagar-service ###
+### Default variable file for storysakhi-service ###
 
 namespace: ""
 imagepullsecrets: ""
@@ -22,7 +22,7 @@ strategy:
   maxsurge: 25
   maxunavailable: 25
 
-#{{ kathaasagar_liveness_readiness | to_nice_yaml }}
+#{{ storysakhi_liveness_readiness | to_nice_yaml }}
 
 autoscaling:
   enabled: false

@@ -8,7 +8,7 @@ kong_nginx_worker_processes: auto
 kong_pg_database: kong
 kong_pg_host: 0.0.0.0
 kong_pg_password: postgres
-kong_pg_ssl: "True"
+kong_pg_ssl: "false"
 kong_pg_user: postgres
 kong_proxy_access_log: "logs/access.log nginx_public_ingress_log_format"
 kong_ratelimit_cache_size: 12m
