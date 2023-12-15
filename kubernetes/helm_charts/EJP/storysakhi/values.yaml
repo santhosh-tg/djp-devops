@@ -5,8 +5,8 @@ imagepullsecrets: ""
 dockerhub: ""
 
 replicaCount: 1
-repository: ""
-image_tag: ""
+ss_repository: ""
+ss_image_tag: ""
 resources:
   requests:
     cpu: 100m
