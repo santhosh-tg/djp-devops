@@ -3,12 +3,12 @@ kind: ConfigMap
 metadata:
   name: {{ .Chart.Name }}-config
 data:
-  GOOGLE_APPLICATION_CREDENTIALS: "{{ .Values.as_gcp_credential_json_path }}"
-  BUCKET_NAME: "{{ .Values.as_gcp_bucket_name }}"
-  DATABASE_NAME: "{{ .Values.as_postgress_db_name }}"
-  DATABASE_USERNAME: "{{ .Values.as_postgres_db_username }}"
-  DATABASE_PASSWORD: "{{ .Values.as_postgres_db_password }}"
-  DATABASE_IP: "{{ .Values.as_postgres_db_host }}"
-  DATABASE_PORT: "{{ .Values.as_postgres_db_port }}"
-  OPENAI_API_KEY: "{{ .Values.as_open_api_key }}"
+  GOOGLE_APPLICATION_CREDENTIALS: "{{ .Values.ss_gcp_credential_json_path }}"
+  BUCKET_NAME: "{{ .Values.ss_gcp_bucket_name }}"
+  DATABASE_NAME: "{{ .Values.ss_postgress_db_name }}"
+  DATABASE_USERNAME: "{{ .Values.ss_postgres_db_username }}"
+  DATABASE_PASSWORD: "{{ .Values.ss_postgres_db_password }}"
+  DATABASE_IP: "{{ .Values.ss_postgres_db_host }}"
+  DATABASE_PORT: "{{ .Values.ss_postgres_db_port }}"
+  OPENAI_API_KEY: "{{ .Values.ss_open_api_key }}"
   
