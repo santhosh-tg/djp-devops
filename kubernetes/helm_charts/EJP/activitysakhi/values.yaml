@@ -1,12 +1,12 @@
-### Default variable file for kathaasaagra-service ###
+### Default variable file for activitysakhi-service ###
 
 namespace: ""
 imagepullsecrets: ""
 dockerhub: ""
 
 replicaCount: 1
-repository: ""
-image_tag: ""
+as_repository: ""
+as_image_tag: ""
 resources:
   requests:
     cpu: 100m
@@ -25,7 +25,7 @@ strategy:
   maxsurge: 25
   maxunavailable: 25
 
-#{{ kathaasaagra_liveness_readiness | to_nice_yaml }}
+#{{ activitysakhi_liveness_readiness | to_nice_yaml }}
 
 autoscaling:
   enabled: false

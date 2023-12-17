@@ -26,7 +26,7 @@ spec:
 {{- end }}
       containers:
       - name: {{ .Chart.Name }}-wrapper
-        image: "{{ .Values.dockerhub }}/{{ .Values.repository_telegram }}:{{ .Values.image_tag }}"
+        image: "{{ .Values.dockerhub }}/{{ .Values.as_repository_telegram }}:{{ .Values.as_image_tag }}"
         imagePullPolicy: Always
         envFrom:
         - configMapRef:
