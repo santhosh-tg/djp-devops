@@ -4,6 +4,20 @@
             "testAdmin"
         ],
         "state": "present",
-        "username": "adi-admin"
+        "username": "api-admin"
+    },
+    {
+        "groups": [
+            "MobileApp"
+        ],
+        "state": "present",
+        "username": "mobile-user"
+    },
+    {
+        "groups": [
+            "WhatsApp"
+        ],
+        "state": "present",
+        "username": "whatsapp-user"
     }
 ]
