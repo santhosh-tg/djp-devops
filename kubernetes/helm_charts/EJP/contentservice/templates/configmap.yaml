@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-config
+data:
+  POSTGRES_USERNAME: "{{ .Values.content_postgres_db_username }}"
+  POSTGRES_HOST: "{{ .Values.content_postgres_db_host }}"
+  POSTGRES_DB: "{{ .Values.content_postgres_db_name }}"
+  POSTGRES_PASSWORD: "{{ .Values.content_postgres_db_password }}"
+  POSTGRES_PORT: "3000"
+  PORT: "5432"
+  CONFIG_URL: "{{ .Values.content_config_url }}"
+  CONFIG_CACHE_TTL: "{{ .Values.content_config_cache_ttl }}"
+  LOG_LEVEL: "{{ .Values.content_log_level }}"

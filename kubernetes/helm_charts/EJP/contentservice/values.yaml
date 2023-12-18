@@ -1,0 +1,28 @@
+namespace: ""
+imagepullsecrets: ""
+dockerhub: "docker.io"
+
+replicaCount: 1
+repository: "sanketnagdive/content"
+image_tag: "latest"
+resources:
+  requests:
+    cpu: 100m
+    memory: 100Mi
+  limits:
+    cpu: 1
+    memory: 1024Mi
+network:
+  port: 3000
+  targetport: 3000
+strategy:
+  type: RollingUpdate
+  maxsurge: 25
+  maxunavailable: 25
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 60
+  targetMemoryUtilizationPercentage: ""
