@@ -1,3 +1,4 @@
+[
 {
   "name": "testapi1",
   "plugins": [
@@ -60,4 +61,89 @@
   "strip_uri": true,
   "upstream_url": "http://storysakhi-service:8000/v1/query",
   "uris": "/api/storysakhi/v1/query"
-}
+},
+{
+  "name": "storySakhiQuery",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://storysakhi-service:8000/v1/query",
+  "uris": "/api/activitysakhi/v1/query"
+},
+{
+  "name": "activitySakhiQuery",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://activitysakhi-service:8000/v1/query",
+  "uris": "/api/storysakhi/v1/query"
+},
+{
+  "name": "sakhiUtilityContext",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://sakhiutility-service:8000/v1/query",
+  "uris": "/api/sakhiutility/v1/context"
+},
+{
+  "name": "sakhiUtilityTranslation",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://sakhiutility-service:8000/v1/query",
+  "uris": "/api/sakhiutility/v1/translation"
+},
+]
