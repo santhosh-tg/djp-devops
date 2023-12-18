@@ -16,6 +16,48 @@
     }
   ],
   "strip_uri": true,
-  "upstream_url": "http://kathaasagar-service:8000/docs",
+  "upstream_url": "http://storysakhi-service:8000/docs",
   "uris": "/docs"
+},
+{
+  "name": "storySakhiHealth",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://storysakhi-service:8000/health",
+  "uris": "/health"
+},
+{
+  "name": "storySakhiQuery",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://storysakhi-service:8000/v1/query",
+  "uris": "/api/storysakhi/v1/query"
 }
