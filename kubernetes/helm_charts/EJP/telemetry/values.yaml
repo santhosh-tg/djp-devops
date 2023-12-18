@@ -10,6 +10,7 @@ telemetry_pg_username: ""
 telemetry_pg_password: ""
 telemetry_pg_db: ""
 telemetry_pg_tablename: ""
+telemetry_dataextract: "true"
 
 
 replicaCount: 1
