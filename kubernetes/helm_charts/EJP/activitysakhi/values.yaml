@@ -6,6 +6,7 @@ dockerhub: ""
 
 replicaCount: 1
 as_repository: ""
+as_repository_telegram: ""
 as_image_tag: ""
 resources:
   requests:

@@ -1,10 +1,10 @@
 namespace: ""
 imagepullsecrets: ""
-dockerhub: "docker.io"
+dockerhub: ""
 
 replicaCount: 1
-repository: "sanketnagdive/content"
-image_tag: "latest"
+content_repository: ""
+content_image_tag: ""
 resources:
   requests:
     cpu: 100m
