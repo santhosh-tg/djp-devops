@@ -1,0 +1,55 @@
+### Default variable file for telemetry-service ###
+
+namespace: ""
+imagepullsecrets: ""
+dockerhub: ""
+telemetry_repository: ""
+telemetry_image_tag: ""
+telemetry_pg_host: ""
+telemetry_pg_username: ""
+telemetry_pg_password: ""
+telemetry_pg_db: ""
+telemetry_pg_tablename: ""
+
+
+replicaCount: 1
+resources:
+  requests:
+    cpu: 100m
+    memory: 100Mi
+  limits:
+    cpu: 1
+    memory: 1024Mi
+network:
+  port: 9001
+  targetport: 9001
+strategy:
+  type: RollingUpdate
+  maxsurge: 25
+  maxunavailable: 25
+
+telemetry_liveness_readiness:
+  healthcheck: true
+  readinessProbe:
+    httpGet:
+      path: /health
+      port: 9001
+    initialDelaySeconds: 15
+    periodSeconds: 15
+    timeoutSeconds: 5
+    failureThreshold: 2
+  livenessProbe:
+    httpGet:
+      path: /health
+      port: 9001
+    initialDelaySeconds: 15
+    periodSeconds: 15
+    timeoutSeconds: 5
+    failureThreshold: 2
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 60
+  targetMemoryUtilizationPercentage: ""

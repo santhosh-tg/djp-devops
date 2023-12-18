@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-config
+data:
+  telemetry_pg_db: "{{ .Values.telemetry_pg_db}}"
+  telemetry_pg_username: "{{ .Values.telemetry_pg_username }}"
+  telemetry_pg_password: "{{ .Values.telemetry_pg_password }}"
+  telemetry_pg_host: "{{ .Values.telemetry_pg_host }}"
+  telemetry_pg_port: "{{ .Values.telemetry_pg_port }}"
+  telemetry_pg_tablename: "{{ .Values.telemetry_pg_port }}"
+  telemetry_dataextract: "{{ .Values.telemetry_dataextract }}"
