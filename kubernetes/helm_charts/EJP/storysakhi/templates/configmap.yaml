@@ -3,12 +3,13 @@ kind: ConfigMap
 metadata:
   name: {{ .Chart.Name }}-config
 data:
-  GOOGLE_APPLICATION_CREDENTIALS: "{{ .Values.ss_gcp_credential_json_path }}"
-  BUCKET_NAME: "{{ .Values.ss_gcp_bucket_name }}"
-  DATABASE_NAME: "{{ .Values.ss_postgress_db_name }}"
-  DATABASE_USERNAME: "{{ .Values.ss_postgres_db_username }}"
-  DATABASE_PASSWORD: "{{ .Values.ss_postgres_db_password }}"
-  DATABASE_IP: "{{ .Values.ss_postgres_db_host }}"
-  DATABASE_PORT: "{{ .Values.ss_postgres_db_port }}"
   OPENAI_API_KEY: "{{ .Values.ss_open_api_key }}"
+  LOG_LEVEL: "{{ .Values.ss_log_level }}"
+  BHASHINI_ENDPOINT_URL: "{{ .Values.ss_bhasini_endpoint_url }}"
+  BHASHINI_API_KEY: "{{ .Values.ss_bhasini_api_key }}"
+  OCI_ENDPOINT_URL: "{{ .Values.ss_oci_endpoint_url }}"
+  OCI_REGION_NAME: "{{ .Values.ss_oci_region_name }}"
+  OCI_BUCKET_NAME: "{{ .Values.ss_oci_bucket_name }}"
+  OCI_SECRET_ACCESS_KEY: "{{ .Values.ss_oci_access_key }}"
+  OCI_ACCESS_KEY_ID: "{{ .Values.ss_oci_secret_key }}"
   

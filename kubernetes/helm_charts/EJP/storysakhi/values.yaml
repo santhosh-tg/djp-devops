@@ -3,10 +3,19 @@
 namespace: ""
 imagepullsecrets: ""
 dockerhub: ""
-
-replicaCount: 1
 ss_repository: ""
 ss_image_tag: ""
+ss_log_level: ""
+ss_open_api_key: ""
+ss_bhasini_endpoint_url: ""
+ss_bhasini_api_key: ""
+ss_oci_endpoint_url: ""
+ss_oci_region_name: ""
+ss_oci_bucket_name: ""
+ss_oci_access_key: ""
+ss_oci_secret_key: ""
+
+replicaCount: 1
 resources:
   requests:
     cpu: 100m

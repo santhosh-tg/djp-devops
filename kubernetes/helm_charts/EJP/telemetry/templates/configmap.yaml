@@ -9,3 +9,4 @@ data:
   telemetry_pg_host: "{{ .Values.telemetry_pg_host }}"
   telemetry_pg_tablename: "{{ .Values.telemetry_pg_tablename }}"
   telemetry_dataextract: "{{ .Values.telemetry_dataextract }}"
+  telemetry_local_storage_type: "{{ .Values.telemetry_local_storage_type }}"
