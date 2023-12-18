@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-config
+data:
+  OPENAI_API_KEY: "{{ .Values.su_open_api_key }}"
+  LOG_LEVEL: "{{ .Values.su_log_level }}"
+  BHASHINI_ENDPOINT_URL: "{{ .Values.su_bhasini_endpoint_url }}"
+  BHASHINI_API_KEY: "{{ .Values.su_bhasini_api_key }}"
+  OCI_ENDPOINT_URL: "{{ .Values.su_oci_endpoint_url }}"
+  OCI_REGION_NAME: "{{ .Values.su_oci_region_name }}"
+  OCI_BUCKET_NAME: "{{ .Values.su_oci_bucket_name }}"
+  OCI_SECRET_ACCESS_KEY: "{{ .Values.su_oci_access_key }}"
+  OCI_ACCESS_KEY_ID: "{{ .Values.su_oci_secret_key }}"
+  

@@ -1,0 +1,41 @@
+### Default variable file for storysakhi-service ###
+
+namespace: ""
+imagepullsecrets: ""
+dockerhub: ""
+su_repository: ""
+su_image_tag: ""
+su_log_level: "INFO"
+su_open_api_key: ""
+su_bhasini_endpoint_url: ""
+su_bhasini_api_key: ""
+su_oci_endpoint_url: ""
+su_oci_region_name: ""
+su_oci_bucket_name: ""
+su_oci_access_key: ""
+su_oci_secret_key: ""
+
+replicaCount: 1
+resources:
+  requests:
+    cpu: 100m
+    memory: 100Mi
+  limits:
+    cpu: 1
+    memory: 1024Mi
+network:
+  port: 8000
+  targetport: 8000
+strategy:
+  type: RollingUpdate
+  maxsurge: 25
+  maxunavailable: 25
+
+#{{ storysakhi_liveness_readiness | to_nice_yaml }}
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 60
+  targetMemoryUtilizationPercentage: ""
