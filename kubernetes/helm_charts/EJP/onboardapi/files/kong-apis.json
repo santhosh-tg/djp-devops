@@ -187,5 +187,26 @@
   "strip_uri": true,
   "upstream_url": "http://ivrs-service:8000/v1/query",
   "uris": "/ivrs/v1/getTodayActivity"
+},
+{
+  "name": "registerMobileApp",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://adminutil:4000/v1/consumer/mobile_app/credential/register",
+  "uris": "/ivrs/v1/getTodayActivity"
 }
 ]
