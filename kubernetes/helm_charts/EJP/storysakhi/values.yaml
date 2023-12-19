@@ -15,9 +15,6 @@ ss_oci_bucket_name: ""
 ss_oci_access_key: ""
 ss_oci_secret_key: ""
 
-#telegram
-ss_repository_telegram: ""
-ss_image_tag_telegram: "latest"
 
 replicaCount: 1
 resources:

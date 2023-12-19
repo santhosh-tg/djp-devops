@@ -13,13 +13,3 @@ data:
   OCI_SECRET_ACCESS_KEY: "{{ .Values.ss_oci_access_key }}"
   OCI_ACCESS_KEY_ID: "{{ .Values.ss_oci_secret_key }}"
   
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: {{ .Chart.Name }}-wrapper-config
-data:
-  token: "{{ .Values.ss_telegram_token }}"
-  botName: "{{ .Values.ss_telegram_botname }}"
-  upstream: "{{ .Values.ss_telegram_upstream }}"
-  loglevel: "{{ .Values.ss_telegram_loglevel }}"
