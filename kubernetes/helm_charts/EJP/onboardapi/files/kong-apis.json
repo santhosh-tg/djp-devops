@@ -207,6 +207,6 @@
   ],
   "strip_uri": true,
   "upstream_url": "http://adminutil:4000/v1/consumer/mobile_app/credential/register",
-  "uris": "/ivrs/v1/getTodayActivity"
+  "uris": "/registerMobile"
 }
 ]
