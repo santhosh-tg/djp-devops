@@ -4,7 +4,7 @@ namespace: ""
 imagepullsecrets: ""
 dockerhub: ""
 ss_repository: ""
-ss_image_tag: ""
+ss_image_tag: "latest"
 ss_log_level: "INFO"
 ss_open_api_key: ""
 ss_bhasini_endpoint_url: ""
@@ -14,6 +14,10 @@ ss_oci_region_name: ""
 ss_oci_bucket_name: ""
 ss_oci_access_key: ""
 ss_oci_secret_key: ""
+
+#telegram
+ss_repository_telegram: ""
+ss_image_tag_telegram: "latest"
 
 replicaCount: 1
 resources:
