@@ -146,4 +146,46 @@
   "upstream_url": "http://sakhiutility-service:8000/v1/query",
   "uris": "/sakhiutility/v1/translation"
 },
+{
+  "name": "ivrsMedia",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://ivrs-service:8000/media",
+  "uris": "/ivrs/v1/media"
+},
+{
+  "name": "ivrsgetTodayActivity",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://ivrs-service:8000/v1/query",
+  "uris": "/ivrs/v1/getTodayActivity"
+}
 ]
