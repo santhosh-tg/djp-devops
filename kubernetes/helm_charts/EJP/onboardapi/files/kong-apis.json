@@ -1,51 +1,18 @@
 [
 {
-  "name": "testapi1",
-  "plugins": [
-    {
-      "name": "cors"
-    },
-    {
-      "config.hour": 5000,
-      "config.limit_by": "credential",
-      "config.policy": "local",
-      "name": "rate-limiting"
-    },
-    {
-      "config.allowed_payload_size": 1,
-      "name": "request-size-limiting"
-    }
-  ],
-  "strip_uri": true,
-  "upstream_url": "http://storysakhi-service:8000/docs",
-  "uris": "/docs"
-},
-{
-  "name": "storySakhiHealth",
-  "plugins": [
-    {
-      "name": "cors"
-    },
-    {
-      "config.hour": 5000,
-      "config.limit_by": "credential",
-      "config.policy": "local",
-      "name": "rate-limiting"
-    },
-    {
-      "config.allowed_payload_size": 1,
-      "name": "request-size-limiting"
-    }
-  ],
-  "strip_uri": true,
-  "upstream_url": "http://storysakhi-service:8000/health",
-  "uris": "/health"
-},
-{
   "name": "storySakhiQuery",
   "plugins": [
     {
       "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "ssQuery"
+      ],
+      "name": "acl"
     },
     {
       "config.hour": 5000,
@@ -63,31 +30,19 @@
   "uris": "/storysakhi/v1/query"
 },
 {
-  "name": "storySakhiQuery",
-  "plugins": [
-    {
-      "name": "cors"
-    },
-    {
-      "config.hour": 5000,
-      "config.limit_by": "credential",
-      "config.policy": "local",
-      "name": "rate-limiting"
-    },
-    {
-      "config.allowed_payload_size": 1,
-      "name": "request-size-limiting"
-    }
-  ],
-  "strip_uri": true,
-  "upstream_url": "http://storysakhi-service:8000/v1/query",
-  "uris": "/activitysakhi/v1/query"
-},
-{
   "name": "activitySakhiQuery",
   "plugins": [
     {
       "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "asQuery"
+      ],
+      "name": "acl"
     },
     {
       "config.hour": 5000,
@@ -102,13 +57,22 @@
   ],
   "strip_uri": true,
   "upstream_url": "http://activitysakhi-service:8000/v1/query",
-  "uris": "/storysakhi/v1/query"
+  "uris": "/activitysakhi/v1/query"
 },
 {
   "name": "sakhiUtilityContext",
   "plugins": [
     {
       "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "suContext"
+      ],
+      "name": "acl"
     },
     {
       "config.hour": 5000,
@@ -122,7 +86,7 @@
     }
   ],
   "strip_uri": true,
-  "upstream_url": "http://sakhiutility-service:8000/v1/query",
+  "upstream_url": "http://sakhiutility:9000/v1/context",
   "uris": "/sakhiutility/v1/context"
 },
 {
@@ -132,6 +96,15 @@
       "name": "cors"
     },
     {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "suTranslation"
+      ],
+      "name": "acl"
+    },
+    {
       "config.hour": 5000,
       "config.limit_by": "credential",
       "config.policy": "local",
@@ -143,7 +116,7 @@
     }
   ],
   "strip_uri": true,
-  "upstream_url": "http://sakhiutility-service:8000/v1/query",
+  "upstream_url": "http://sakhiutility-service:9000/v1/translation",
   "uris": "/sakhiutility/v1/translation"
 },
 {
@@ -151,6 +124,15 @@
   "plugins": [
     {
       "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "ivrsMedia"
+      ],
+      "name": "acl"
     },
     {
       "config.hour": 5000,
@@ -174,6 +156,15 @@
       "name": "cors"
     },
     {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "ivrsActivity"
+      ],
+      "name": "acl"
+    },
+    {
       "config.hour": 5000,
       "config.limit_by": "credential",
       "config.policy": "local",
@@ -185,7 +176,7 @@
     }
   ],
   "strip_uri": true,
-  "upstream_url": "http://ivrs-service:8000/v1/query",
+  "upstream_url": "http://ivrs-service:8000/getTodayActivity",
   "uris": "/ivrs/v1/getTodayActivity"
 },
 {
@@ -193,6 +184,15 @@
   "plugins": [
     {
       "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "appRegister"
+      ],
+      "name": "acl"
     },
     {
       "config.hour": 5000,
@@ -208,5 +208,125 @@
   "strip_uri": true,
   "upstream_url": "http://adminutil:4000/v1/consumer/mobile_app/credential/register",
   "uris": "/registerMobile"
+},
+{
+  "name": "contentConfigRead",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "configRead"
+      ],
+      "name": "acl"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://content-service:3000/v1/config/read",
+  "uris": "/content/v1/config/read"
+},
+{
+  "name": "contentPageSearch",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "pageSearch"
+      ],
+      "name": "acl"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://content-service:3000/v1/page/search",
+  "uris": "/content/v1/page/search"
+},
+{
+  "name": "contentSearch",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "contentSearch"
+      ],
+      "name": "acl"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://content-service:3000/v1/content/search",
+  "uris": "/content/v1/content/search"
+},
+{
+  "name": "telemetry",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "telemetryCreate"
+      ],
+      "name": "acl"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://telemetry-service:9000/v1/telemetry",
+  "uris": "/telemetry/v1"
 }
 ]
