@@ -1,23 +1,37 @@
 [
     {
         "groups": [
-            "testAdmin"
-        ],
+            "appCreate",
+            "configRead",
+            "ssQuery",
+            "asQuery",
+            "suContext",
+            "suTranslation",
+            "ivrsActivity",
+            "appAdmin",
+            "telemetryCreate",
+            "configRead",
+            "pageSearch",
+            "contentSearch"
+       ],
         "state": "present",
-        "username": "api-admin"
+        "username": "mobile_app"
     },
     {
         "groups": [
-            "MobileApp"
+            "ssQuery",
+            "asQuery",
+            "telemetryCreate"
         ],
         "state": "present",
-        "username": "mobile-user"
+        "username": "whatsapp_user"
     },
     {
         "groups": [
-            "WhatsApp"
+            "ivrsMedia",
+            "ivrsActivity"
         ],
         "state": "present",
-        "username": "whatsapp-user"
+        "username": "exotel_user"
     }
 ]
