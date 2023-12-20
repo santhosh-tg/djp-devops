@@ -28,6 +28,9 @@ spec:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.dockerhub }}/{{ .Values.ivrs_repository }}:{{ .Values.image_tag }}"
         imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: {{ .Chart.Name }}-config
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         ports:
