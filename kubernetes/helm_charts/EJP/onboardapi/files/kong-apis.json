@@ -86,7 +86,7 @@
     }
   ],
   "strip_uri": true,
-  "upstream_url": "http://sakhiutility:8000/v1/context",
+  "upstream_url": "http://sakhiutility-service:8000/v1/context",
   "uris": "/sakhiutility/v1/context"
 },
 {
