@@ -86,7 +86,7 @@
     }
   ],
   "strip_uri": true,
-  "upstream_url": "http://sakhiutility:9000/v1/context",
+  "upstream_url": "http://sakhiutility:8000/v1/context",
   "uris": "/sakhiutility/v1/context"
 },
 {
@@ -116,7 +116,7 @@
     }
   ],
   "strip_uri": true,
-  "upstream_url": "http://sakhiutility-service:9000/v1/translation",
+  "upstream_url": "http://sakhiutility-service:8000/v1/translation",
   "uris": "/sakhiutility/v1/translation"
 },
 {
@@ -326,7 +326,7 @@
     }
   ],
   "strip_uri": true,
-  "upstream_url": "http://telemetry-service:9000/v1/telemetry",
+  "upstream_url": "http://telemetry-service:9001/v1/telemetry",
   "uris": "/telemetry/v1"
 }
 ]
