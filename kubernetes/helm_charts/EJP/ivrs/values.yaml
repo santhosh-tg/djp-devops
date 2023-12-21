@@ -20,6 +20,8 @@ strategy:
   maxsurge: 25
   maxunavailable: 25
 
+ivrs_config_url: ""
+
 autoscaling:
   enabled: false
   minReplicas: 1
