@@ -2,11 +2,14 @@
 
 #nginx_private_ingress_ip: "10.0.1.100"
 domain: "dev.ejp.sunbird.org"
+dashboard_domain: ""
 #cloud_public_storage_accountname: ""
 #cloud_public_storage_container: ""
 # nginx private and public cert
-core_vault_proxy_site_key: "new"
-core_vault_proxy_site_crt: "new"
+core_vault_proxy_site_key: ""
+core_vault_proxy_site_crt: ""
+dashboard_vault_proxy_site_key: ""
+dashboard_vault_proxy_site_crt: ""
 merge_domain_status: false
 service:
   type: LoadBalancer
