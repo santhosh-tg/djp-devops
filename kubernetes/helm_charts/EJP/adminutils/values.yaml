@@ -1,3 +1,4 @@
+
 namespace: ""
 imagepullsecrets: devregistrysecrett
 dockerhub: hyd.ocir.io/ax2cel5zyviy/ekstep-djp
@@ -37,7 +38,49 @@ livenessProbe:
   periodSeconds: 15
   timeoutSeconds: 5
   failureThreshold: 2
-
+adminutilenv:
+  JAVA_OPTS: "-Xms256m -Xmx256m"
+  SERVER_PORT: '"4000"'
+  AM_ADMIN_API_ENDPOINT: "http://kong.djp.svc.cluster.local:8001"
+  SPRING_PROFILES_ACTIVE: production
+  DEFAULT_CONSUMER_GROUP: contentUser
+  ENDPOINTS_HEALTH_ID: apihealth
+  ENDPOINTS_HEALTH_SENSITIVE: '"false"'
+  ENDPOINTS_METRICS_ID: metrics
+  ENDPOINTS_METRICS_SENSITIVE: '"false"'
+  AM_ADMIN_API_KEYS: "mobile_device,desktop_device,portal_anonymous,portal_loggedin,access"
+  AM_ADMIN_API_MOBILE_DEVICE_BASEPATH: "/keys/"
+  AM_ADMIN_API_MOBILE_DEVICE_KEYPREFIX: '"mobile_devicev2_key"'
+  AM_ADMIN_API_MOBILE_DEVICE_KEYSTART: '"1"'
+  AM_ADMIN_API_MOBILE_DEVICE_KEYCOUNT: '"10"'
+  AM_ADMIN_API_DESKTOP_DEVICE_BASEPATH: "/keys/"
+  AM_ADMIN_API_DESKTOP_DEVICE_KEYPREFIX: '"desktop_devicev2_key"'
+  AM_ADMIN_API_DESKTOP_DEVICE_KEYSTART: '"1"'
+  AM_ADMIN_API_DESKTOP_DEVICE_KEYCOUNT: '"10"'
+  AM_ADMIN_API_PORTAL_ANONYMOUS_BASEPATH: "/keys/"
+  AM_ADMIN_API_PORTAL_ANONYMOUS_KEYPREFIX: '"portal_anonymous_key"'
+  AM_ADMIN_API_PORTAL_ANONYMOUS_KEYSTART: '"1"'
+  AM_ADMIN_API_PORTAL_ANONYMOUS_KEYCOUNT: '"10"'
+  AM_ADMIN_API_PORTAL_LOGGEDIN_BASEPATH: "/keys/"
+  AM_ADMIN_API_PORTAL_LOGGEDIN_KEYPREFIX: '"portal_loggedin_key"'
+  AM_ADMIN_API_PORTAL_LOGGEDIN_KEYSTART: '"1"'
+  AM_ADMIN_API_PORTAL_LOGGEDIN_KEYCOUNT: '"10"'
+  AM_ADMIN_API_ACCESS_BASEPATH: "/keys/"
+  AM_ADMIN_API_ACCESS_KEYPREFIX: '"accessv1_key"'
+  AM_ADMIN_API_ACCESS_KEYSTART: '"1"'
+  AM_ADMIN_API_ACCESS_KEYCOUNT: '"10"'
+  REFRESH_TOKEN_PUBLIC_BASEPATH: "/keys/"
+  REFRESH_TOKEN_PUBLIC_KEYPREFIX: '"refresh_token_public_key"'
+  REFRESH_TOKEN_KID: '"hvk1ybF0x4I_U0kmFFIchoFyvCVnDHPprEXRXzphBiE"'
+  REFRESH_TOKEN_SECRET_KEY: '"Sa0s6fjTsPP4d78-obMOZEjLiDYHoLX6ubWEdF32WlNrpnKsX1Gnpl9Tgwwxg07p123YjS--1dGSWuIZgGD2ng"'
+  REFRESH_TOKEN_DOMAIN: '"https://djp.sunbirded.org/auth/realms/sunbird"'
+  REFRESH_TOKEN_PRELOAD: '"true"'
+  ACCESS_TOKEN_VALIDITY: '"43200"'
+  REFRESH_TOKEN_OFFLINE_VALIDITY: '"15552000"'
+  REFRESH_TOKEN_LOG_OLDER_THAN: '"30"'
+  LEARNER_BASE_API_URL: '"http://kong:8000"'
+  EMBED_ROLE: '"true"'
+  LEARNER_API_AUTH_KEY: '""'
 autoscaling:
   enabled: false
   minReplicas: 1

@@ -1,12 +1,12 @@
 ### Default variable file for whatsapp-bot-service ###
 
 namespace: ""
-imagepullsecrets: ""
-dockerhub: ""
+imagepullsecrets: devregistrysecret
+dockerhub: hyd.ocir.io/ax2cel5zyviy/ekstep-djp
 
 replicaCount: 1
-repository: ""
-image_tag: ""
+whatsapp_repository: "whatsappbot"
+whatsapp_image_tag: "latest"
 resources:
   requests:
     cpu: 100m
@@ -15,8 +15,8 @@ resources:
     cpu: 1
     memory: 1024Mi
 network:
-  port: 8000
-  targetport: 8000
+  port: 3010
+  targetport: 3010
 strategy:
   type: RollingUpdate
   maxsurge: 25
@@ -30,3 +30,11 @@ autoscaling:
   maxReplicas: 2
   targetCPUUtilizationPercentage: 60
   targetMemoryUtilizationPercentage: ""
+
+wa_story_sakhi_endpoint_url: "http://storysakhi-service:8000"
+wa_activity_sakhi_endpoint_url: "http://activitysakhi-service:8000"
+wa_char_limit: "1024"
+wa_netcore_token: "random1value"
+wa_telemetry_service_url: "http://telemetry-service:9001"
+wa_port: "3010"
+wa_api_token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3ZnNHSHd4Y0t2Qk5UM2lKRlBja0l6NkY1Sm83U2cwUSJ9.jhRPpdvdni_DKHCPF-KDxK_y_4gFnSRpEcPfsLT5GoE"

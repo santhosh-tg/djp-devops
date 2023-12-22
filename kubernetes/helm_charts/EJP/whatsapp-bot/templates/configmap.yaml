@@ -3,13 +3,10 @@ kind: ConfigMap
 metadata:
   name: {{ .Chart.Name }}-config
 data:
-  STORY_SAKHI_ENDPOINT: "{{ .Values.story_sakhi_endpoint_url }}"
-  ACTIVITY_SAKHI_ENDPOINT: "{{ .Values.activity_sakhi_endpoint_url }}"
-  REDIS_HOST: "{{ .Values.whatsapp_redis_hostname }}"
-  REDIS_PORT: "{{ .Values.whatsapp_redis_port }}"
-  REDIS_INDEX: "{{ .Values.whatsapp_redis_index }}"
-  WHATSAPP_VERSION: "{{ .Values.whatsapp_version }}" # Whatsapp version number
-  WHATSAPP_PHONEID: "{{ .Values.whatsapp_phoneid }}" # Registered whatsapp number 
-  WHATSAPP_TOKEN: "{{ .Values.whatsapp_token }}" # Whatsapp token or whatsapp service provider (Netcore) token
-  VERIFY_TOKEN: "{{ .Values.whatsapp_verify_token }}" # UUID to verify the request coming from the valid service provider
- 
+  STORY_SAKHI_URL: "{{ .Values.wa_story_sakhi_endpoint_url }}"
+  ACTIVITY_SAKHI_URL: "{{ .Values.wa_activity_sakhi_endpoint_url }}"
+  CHAR_LIMIT: "{{ .Values.wa_char_limit }}"
+  NETCORE_TOKEN: "{{ .Values.wa_netcore_token }}" # Whatsapp version number
+  TELEMETRY_SERVICE_URL: "{{ .Values.wa_telemetry_service_url }}" # Registered whatsapp number 
+  PORT: "{{ .Values.wa_port }}" # Whatsapp token or whatsapp service provider (Netcore) token
+  API_TOKEN: "{{ .Values.wa_api_token }}" # UUID to verify the request coming from the valid service provider 
