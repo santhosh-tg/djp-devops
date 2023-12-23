@@ -4,4 +4,7 @@ metadata:
   name: {{ .Chart.Name }}-config
 data:
   IVRS_CONFIG_URL: "{{ .Values.ivrs_config_url }}"
+  TELEMETRY_API_URL: "{{ .Values.ivrs_telemetry_api_url}}"
+  ENV: "{{ .Values.ivrs_env }}"
+
 

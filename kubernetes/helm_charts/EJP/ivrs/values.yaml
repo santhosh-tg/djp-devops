@@ -21,7 +21,8 @@ strategy:
   maxunavailable: 25
 
 ivrs_config_url: ""
-
+ivrs_telemetry_api_url: ""
+ivrs_env: "dev"
 autoscaling:
   enabled: false
   minReplicas: 1
