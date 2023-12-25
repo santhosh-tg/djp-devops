@@ -2,9 +2,10 @@ namespace: ""
 imagepullsecrets: ""
 dockerhub: ""
 
+content_repository: contentservice
+content_image_tag: latest
+
 replicaCount: 1
-content_repository: ""
-content_image_tag: ""
 resources:
   requests:
     cpu: 100m

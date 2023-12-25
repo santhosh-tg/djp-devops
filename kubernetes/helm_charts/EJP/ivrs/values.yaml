@@ -2,9 +2,10 @@ namespace: ""
 imagepullsecrets: ""
 dockerhub: ""
 
-replicaCount: 1
-ivrs_repository: ""
+ivrs_repository: "ivrs"
 image_tag: "latest"
+
+replicaCount: 1
 resources:
   requests:
     cpu: 100m
