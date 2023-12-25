@@ -1,9 +1,13 @@
 ### Default variable file for storysakhi-service ###
+environment: "dev"
+telemetry_url: "http://telemetry-service:9001"
+telemetry_log_enabled: "true"
 
 namespace: ""
 imagepullsecrets: ""
 dockerhub: ""
-ss_repository: ""
+
+ss_repository: "story_sakhi_api_service"
 ss_image_tag: "latest"
 ss_log_level: "INFO"
 ss_open_api_key: ""

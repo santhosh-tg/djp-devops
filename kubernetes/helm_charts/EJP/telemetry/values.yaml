@@ -1,4 +1,5 @@
 ### Default variable file for telemetry-service ###
+environment: "dev"
 
 namespace: ""
 imagepullsecrets: ""

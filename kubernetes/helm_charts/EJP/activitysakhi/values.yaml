@@ -1,13 +1,17 @@
 ### Default variable file for activitysakhi-service ###
+environment: "dev"
+telemetry_url: "http://telemetry-service:9001"
+telemetry_log_enabled: "true"
 
 namespace: ""
 imagepullsecrets: ""
 dockerhub: ""
 
-replicaCount: 1
-as_repository: ""
+as_repository: "activity_sakhi_api_service"
+as_image_tag: "latest"
 as_repository_telegram: ""
-as_image_tag: ""
+
+replicaCount: 1
 resources:
   requests:
     cpu: 100m
