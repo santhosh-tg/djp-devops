@@ -328,5 +328,35 @@
   "strip_uri": true,
   "upstream_url": "http://telemetry-service:9001/v1/telemetry",
   "uris": "/telemetry/v1"
+},
+{
+  "name": "telemetryMetric",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "telemetryMetric"
+      ],
+      "name": "acl"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://telemetry-service:9001/v1/metrics",
+  "uris": "/telemetry/v1/metrics"
 }
 ]
