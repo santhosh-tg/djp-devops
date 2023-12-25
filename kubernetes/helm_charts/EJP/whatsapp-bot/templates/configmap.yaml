@@ -6,7 +6,18 @@ data:
   STORY_SAKHI_URL: "{{ .Values.wa_story_sakhi_endpoint_url }}"
   ACTIVITY_SAKHI_URL: "{{ .Values.wa_activity_sakhi_endpoint_url }}"
   CHAR_LIMIT: "{{ .Values.wa_char_limit }}"
+  BOT_API_TOKEN: "{{ .Values.wa_bot_api_token }}"
   NETCORE_TOKEN: "{{ .Values.wa_netcore_token }}" # Whatsapp version number
   TELEMETRY_SERVICE_URL: "{{ .Values.wa_telemetry_service_url }}" # Registered whatsapp number 
   PORT: "{{ .Values.wa_port }}" # Whatsapp token or whatsapp service provider (Netcore) token
   API_TOKEN: "{{ .Values.wa_api_token }}" # UUID to verify the request coming from the valid service provider 
+  APP_ENV: "{{ .Values.wa_app_env }}"
+  APP_NAME: "{{ .Values.wa_app_name }}"
+  REDIS_HOST: "{{ .Values.wa_redis_host }}"
+  REDIS_PORT: "6379"
+  REDIS_INDEX: "0"
+  WA_PROVIDER_TOKEN: "{{ .Values.wa_provider_token }}"
+  WA_PROVIDER_NUMBER: "{{ .Values.wa_provider_number }}"
+  WA_PROVIDER_APPNAME: "{{ .Values.wa_provider_appname }}"
+
+

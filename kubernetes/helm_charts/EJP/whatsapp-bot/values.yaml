@@ -5,7 +5,7 @@ imagepullsecrets: devregistrysecret
 dockerhub: hyd.ocir.io/ax2cel5zyviy/ekstep-djp
 
 replicaCount: 1
-whatsapp_repository: "whatsappbot"
+whatsapp_repository: "wat"
 whatsapp_image_tag: "latest"
 resources:
   requests:
@@ -38,3 +38,9 @@ wa_netcore_token: "random1value"
 wa_telemetry_service_url: "http://telemetry-service:9001"
 wa_port: "3010"
 wa_api_token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3ZnNHSHd4Y0t2Qk5UM2lKRlBja0l6NkY1Sm83U2cwUSJ9.jhRPpdvdni_DKHCPF-KDxK_y_4gFnSRpEcPfsLT5GoE"
+wa_bot_api_token: ""
+wa_provider_token: ""
+wa_provider_number: "917834811114"
+wa_provider_appname: "TestDJP"
+wa_app_env: "dev"
+wa_app_name: "djp"
