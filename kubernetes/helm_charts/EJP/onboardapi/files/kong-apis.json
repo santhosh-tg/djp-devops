@@ -366,15 +366,6 @@
       "name": "cors"
     },
     {
-      "name": "jwt"
-    },
-    {
-      "config.whitelist": [
-        "whatsApp"
-      ],
-      "name": "acl"
-    },
-    {
       "config.hour": 5000,
       "config.limit_by": "credential",
       "config.policy": "local",
