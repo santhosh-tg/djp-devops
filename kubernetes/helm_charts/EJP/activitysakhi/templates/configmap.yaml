@@ -4,7 +4,7 @@ metadata:
   name: {{ .Chart.Name }}-config
 data:
   OPENAI_API_KEY: "{{ .Values.as_open_api_key }}"
-  LOG_LEVEL: "{{ .Values.as_open_api_key }}"
+  LOG_LEVEL: "{{ .Values.as_log_level }}"
   BHASHINI_ENDPOINT_URL: "{{ .Values.as_bhasini_endpoint_url }}"
   BHASHINI_API_KEY: "{{ .Values.as_bhasini_api_key }}"
   OCI_ENDPOINT_URL: "{{ .Values.as_open_api_key }}"
