@@ -9,7 +9,8 @@ dockerhub: ""
 
 as_repository: "activity_sakhi_api_service"
 as_image_tag: "latest"
-as_repository_telegram: ""
+as_log_level: INFO
+
 
 replicaCount: 1
 resources:
