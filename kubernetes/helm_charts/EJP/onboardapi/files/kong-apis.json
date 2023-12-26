@@ -377,7 +377,7 @@
     }
   ],
   "strip_uri": true,
-  "upstream_url": "http://whatsapp-bot:3010/webhook",
+  "upstream_url": "http://whatsapp-bot-service:3010/webhook",
   "uris": "/whatsapp/webhook"
 }
 ]
