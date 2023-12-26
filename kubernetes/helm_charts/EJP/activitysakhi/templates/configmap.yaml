@@ -7,7 +7,7 @@ data:
   LOG_LEVEL: "{{ .Values.as_log_level }}"
   BHASHINI_ENDPOINT_URL: "{{ .Values.as_bhasini_endpoint_url }}"
   BHASHINI_API_KEY: "{{ .Values.as_bhasini_api_key }}"
-  OCI_ENDPOINT_URL: "{{ .Values.as_open_api_key }}"
+  OCI_ENDPOINT_URL: "{{ .Values.as_oci_endpoint_url }}"
   OCI_REGION_NAME: "{{ .Values.as_oci_region_name }}"
   OCI_BUCKET_NAME: "{{ .Values.as_oci_bucket_name }}"
   OCI_SECRET_ACCESS_KEY: "{{ .Values.as_oci_secret_access_key }}"
