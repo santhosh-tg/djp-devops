@@ -38,7 +38,7 @@ postgresql_locales:
 
 # Databases to ensure exist.
 postgresql_databases: 
- - name: "{{ kong_db_name | default('api_manager') }}"
+ - name: "{{ kong_pg_database | default('api_manager') }}"
 #   template: # defaults to 'template0'
 #   login_host: # defaults to 'localhost'
 #   login_password: # defaults to not set
@@ -50,9 +50,9 @@ postgresql_databases:
 
 # Users to ensure exist.
 postgresql_users:
- - name: "{{ kong_db_user | default('kong_user') }}"
-   password: "{{ kong_db_pass | default('kong_pass') }}"
-   db: "{{ kong_db_name | default('api_manager') }}"
+ - name: "{{ kong_pg_user | default('kong_user') }}"
+   password: "{{ kong_pg_password }}"
+   db: "{{ kong_pg_database | default('api_manager') }}"
 #   encrypted: # defaults to not set
 #   priv: # defaults to not set
 #   role_attr_flags: # defaults to not set
