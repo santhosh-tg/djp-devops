@@ -1,8 +1,8 @@
 ### Default variable file for whatsapp-bot-service ###
 
 namespace: ""
-imagepullsecrets: devregistrysecret
-dockerhub: hyd.ocir.io/ax2cel5zyviy/ekstep-djp
+imagepullsecrets: ""
+dockerhub: ""
 
 replicaCount: 1
 whatsapp_repository: "wat"
