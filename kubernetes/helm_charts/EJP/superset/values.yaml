@@ -1,3 +1,35 @@
+postgres:
+  adminUser: ""
+  adminPassword: ""
+  db_host: ""
+  db_port: "5432"
+  superset:
+    db_name: ""
+    db_username: ""
+    db_password: ""
+
+redis_host: ""
+redis_port: '6379'
+superset_redis_db_index: '3'
+
+replicaCount: 1
+oauth_enabled: False
+
+adminUser:
+  username: ""
+  firstname: ""
+  lastname: ""
+  email: ""
+  password: ""
+
+oauth:
+  enabled: false
+  client_id: "client_id"
+  client_secret: "client_secret"
+  email_whitelist_regex: ""
+  whitelist_domain: ""
+  user_registration_role: "Gamma"
+
 runAsUser: 1000
 
 # Install additional packages and do any other bootstrap configuration in this script
