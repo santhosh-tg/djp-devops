@@ -1,0 +1,109 @@
+#common vars
+namespace:
+imagepullsecrets:
+dockerhub:
+
+#kong vars
+kong_pg_database: 
+kong_pg_host: 
+kong_pg_user: 
+kong_pg_password: 
+
+#nginx vars
+domain: 
+dashboard_domain: 
+core_vault_proxy_site_key: # private key of main domain
+  
+core_vault_proxy_site_crt:  # cert of main domain
+  
+dashboard_vault_proxy_site_key:  # private key of dashboard domain
+  
+dashboard_vault_proxy_site_crt:  # cert of 
+  
+
+#storysakhi vars
+
+ss_open_api_key: 
+ss_bhasini_endpoint_url: 
+ss_bhasini_api_key: 
+ss_oci_endpoint_url: 
+ss_oci_region_name: 
+ss_oci_bucket_name: 
+ss_oci_access_key: 
+ss_oci_secret_key: 
+
+
+# activitysakhi vars
+
+as_open_api_key: 
+as_bhasini_endpoint_url:
+as_bhasini_api_key: 
+as_oci_endpoint_url:
+as_oci_region_name: 
+as_oci_bucket_name: 
+as_oci_access_key: 
+as_oci_secret_key: 
+as_marco_url: 
+marco_index_name: 
+
+# sakhi utility
+su_open_api_key:
+su_bhasini_endpoint_url:
+su_bhasini_api_key:
+su_oci_endpoint_url:
+su_oci_region_name: 
+su_oci_bucket_name:
+su_oci_access_key: 
+su_oci_secret_key: 
+
+# contentservice
+content_postgres_db_username: 
+content_postgres_db_host: 
+content_postgres_db_name:
+content_postgres_db_password:
+content_config_url: https://ax2cel5zyviy.objectstorage.ap-hyderabad-1.oci.customer-oci.com/n/ax2cel5zyviy/b/sbdjpbotspublic/o/config.json
+
+# ivrs
+ivrs_config_url:
+
+
+# superset
+postgres:
+  adminUser: 
+  adminPassword:
+  db_host:
+  db_port: "5432"
+  superset:
+    db_name: 
+    db_username: 
+    db_password:
+
+redis_host:
+redis_port: '6379'
+superset_redis_db_index: '3'
+
+adminUser:
+  username:
+  firstname:
+  lastname: 
+  email:
+  password:
+
+
+#telemetryservice
+telemetry_pg_host: 
+telemetry_pg_username: 
+telemetry_pg_password: 
+telemetry_pg_db:
+telemetry_pg_tablename: 
+
+# whatsapp bot vars
+wa_api_token:
+wa_provider_number:
+wa_provider_token:
+wa_provider_appname:
+wa_postgres_url: "postgres://USER:PASS@HOST:5432/DBNAME/sslmode=no-verify"
+wa_app_env: "dev"
+wa_app_name: ""
+
+
