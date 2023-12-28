@@ -20,13 +20,12 @@ pipeline {
                         jobName = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-1].trim().toLowerCase()
                         currentWs = sh(returnStdout: true, script: 'pwd').trim()
                         ansiblePlaybook = "${currentWs}/ansible/provision.yml"
-                        hosts_file = "${currentWs}/private_repo/ansible/inventory/dev/EJP/hosts"
-                        sh "helm upgrade --install $jobName $chart_path --namespace  $djp_namespace --kubeconfig  $kubeconfig_path -f $values_file"
+                        hostsFile = "${currentWs}/private_repo/ansible/inventory/dev/EJP/hosts"
+                        sh "ansible-playbook -i $hostsFile $ansiblePlaybook -v"
                 }
             }
         }
     }
 
 }
-
 
