@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout public repo') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('checkout private repo') {
+            steps {
+                    dir('private_repo') {
+                    git branch: private_repo_branch, credentialsId: private_repo_credentials, url: private_repo_url
+                }
+             }
+            }
+        stage('Deploy') {
+            steps {
+                script {
+                        jobName = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-1].trim().toLowerCase()
+                        currentWs = sh(returnStdout: true, script: 'pwd').trim()
+                        ansiblePlaybook = "${currentWs}/ansible/provision.yml"
+                        hosts_file = "${currentWs}/private_repo/ansible/inventory/dev/EJP/hosts"
+                        sh "helm upgrade --install $jobName $chart_path --namespace  $djp_namespace --kubeconfig  $kubeconfig_path -f $values_file"
+                }
+            }
+        }
+    }
+
+}
+
+
