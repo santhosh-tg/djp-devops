@@ -4,9 +4,16 @@ namespace: ""
 imagepullsecrets: ""
 dockerhub: ""
 
-replicaCount: 1
+
 whatsapp_repository: "whatsappbot"
 whatsapp_image_tag: "latest"
+wa_story_sakhi_endpoint_url: "http://storysakhi-service:8000/v1/query"
+wa_activity_sakhi_endpoint_url: "http://activitysakhi-service:8000/v1/query"
+wa_char_limit: "1024"
+wa_telemetry_service_url: "http://telemetry-service:9001/v1/telemetry"
+wa_port: "3010"
+
+replicaCount: 1
 resources:
   requests:
     cpu: 100m
