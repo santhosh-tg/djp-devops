@@ -1,7 +1,7 @@
 #jinja2:lstrip_blocks: True
 
 #nginx_private_ingress_ip: "10.0.1.100"
-domain: "dev.ejp.sunbird.org"
+domain: ""
 dashboard_domain: ""
 #cloud_public_storage_accountname: ""
 #cloud_public_storage_container: ""
@@ -14,21 +14,23 @@ merge_domain_status: false
 service:
   type: LoadBalancer
   annotations:
-    service.beta.kubernetes.io/oci-load-balancer-shape: "400Mbps"
+    service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: 400mbps
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: 100mbps
 
   
   ports:
   - port: 80
     name: http
     targetPort: 80
-    nodePort: 31380
+    nodePort: 31580
   - port: 443
     name: https
     targetPort: 443
-    nodePort: 31310
+    nodePort: 31510
 
-imagepullsecrets: regcred
-dockerhub: docker.io
+imagepullsecrets: ""
+dockerhub: ""
 
 resources:
   requests:
@@ -38,8 +40,8 @@ resources:
     cpu: 1
     memory: '1024Mi'
 
-repository: sanketnagdive/nginxrepo
-image_tag: latest
+repository: "nginx"
+image_tag: "latest"
 pullPolicy: IfNotPresent
 
 serviceMonitor:

@@ -1,10 +1,11 @@
 ---
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Deployment
 metadata:
   name: nginx-public-ingress
   namespace: {{ .Release.namespace }}
 spec:
+  relicas: 2
   selector:
     matchLabels:
       app: nginx-public-ingress
@@ -26,15 +27,15 @@ spec:
       - name: {{ .Values.imagepullsecrets }}
 {{- end }}
       volumes:
-        - name: tls
-          secret:
-            secretName: ingress-cert
         - name: proxy-config
           configMap:
             name: proxy-default
         - name: nginx-config
           configMap:
             name: nginx-conf
+        - name: tls
+          secret:
+            secretName: ingress-cert-new
 # {{- if .Values.apple_universal_links }}
 #         - name: apple-site-association
 #           configMap:
@@ -42,19 +43,19 @@ spec:
 # {{- end }}
       containers:
       - name: nginx-public
-        image: "{{ .Values.dockerhub }}/{{ .Values.repository }}:{{ .Values.image_tag }}"
+        image: "{{ .Values.dockerhub }}/{{ .Values.nginx_repository }}:{{ .Values.nginx_image_tag }}"
         imagePullPolicy: IfNotPresent
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         volumeMounts:
-          - name: tls
-            mountPath: /etc/secrets
-            readOnly: true
           - name: proxy-config
             mountPath: /etc/nginx/defaults.d
           - name: nginx-config
             mountPath: /etc/nginx/nginx.conf
             subPath: nginx.conf
+          - name: tls
+            mountPath: /etc/secrets
+            readOnly: true
 # {{- if .Values.apple_universal_links }}
 #           - name: apple-site-association
 #             mountPath: /var/www/html
