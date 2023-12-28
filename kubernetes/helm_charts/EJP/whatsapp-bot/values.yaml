@@ -5,7 +5,7 @@ imagepullsecrets: ""
 dockerhub: ""
 
 replicaCount: 1
-whatsapp_repository: "wat"
+whatsapp_repository: "whatsappbot"
 whatsapp_image_tag: "latest"
 resources:
   requests:
