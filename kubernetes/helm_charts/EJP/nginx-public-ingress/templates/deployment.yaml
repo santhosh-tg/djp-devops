@@ -5,7 +5,7 @@ metadata:
   name: nginx-public-ingress
   namespace: {{ .Release.namespace }}
 spec:
-  relicas: 2
+  replicas: 2
   selector:
     matchLabels:
       app: nginx-public-ingress
