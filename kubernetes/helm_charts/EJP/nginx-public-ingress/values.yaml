@@ -40,9 +40,9 @@ resources:
     cpu: 1
     memory: '1024Mi'
 
-repository: "nginx"
-image_tag: "latest"
-pullPolicy: IfNotPresent
+nginx_repository: "nginx"
+nginx_image_tag: "latest"
+pullPolicy: Always
 
 serviceMonitor:
   enabled: false
