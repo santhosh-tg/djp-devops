@@ -15,6 +15,7 @@ telemetry_pg_db: ""
 telemetry_pg_tablename: ""
 telemetry_dataextract: "true"
 telemetry_local_storage_type: "postgres"
+telemetry_pg_ssl: "false"
 
 replicaCount: 1
 resources:
