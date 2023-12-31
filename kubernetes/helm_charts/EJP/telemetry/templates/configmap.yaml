@@ -11,3 +11,4 @@ data:
   telemetry_dataextract: "{{ .Values.telemetry_dataextract }}"
   telemetry_local_storage_type: "{{ .Values.telemetry_local_storage_type }}"
   telemetry_environment: "{{ .Values.environment }}"
+  telemetry_pg_ssl: "{{ .Values.telemetry_pg_ssl }}"
