@@ -3,7 +3,6 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 echo -e "\n\e[0;32m${bold}Clean up${normal}"
-rm -rf /etc/apt/sources.list.d/azure-cli.list /etc/apt/sources.list.d/packages_microsoft_com_repos_azure_cli.list*
 
 echo -e "\n\e[0;32m${bold}Updating the apt repo${normal}\n"
 apt-get update
@@ -71,27 +70,6 @@ rm -rf node-v6.17.1-linux-x64*
 echo -e "\n\e[0;32m${bold}Installating Ansible${normal}"
 pip uninstall -y ansible
 pip3 install ansible==2.8.19
-
-echo -e "\n\e[0;32m${bold}Installating azure cli${normal}"
-apt-get install ca-certificates curl apt-transport-https lsb-release gnupg
-curl -sL https://packages.microsoft.com/keys/microsoft.asc |
-    gpg --dearmor |
-    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
-AZ_REPO=$(lsb_release -cs)
-echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" |
-    sudo tee /etc/apt/sources.list.d/azure-cli.list
-sudo apt-get update
-sudo apt-get install azure-cli
-
-# Install azcopy
-echo -e "\n\e[0;32m${bold}Installating AzCopy${normal}"
-apt update
-wget https://aka.ms/downloadazcopy-v10-linux
-tar -xf downloadazcopy-v10-linux
-cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
-chmod +x /usr/bin/azcopy
-rm -rf downloadazcopy-v10-linux* azcopy_linux_amd*
-###
 
 echo -e "\n\e[0;32m${bold}Installating pip docker${normal}"
 pip install docker
