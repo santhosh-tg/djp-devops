@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout public repo') {
+        stage('Checkout helm chart') {
             steps {
                 checkout scm
             }
@@ -20,9 +20,9 @@ pipeline {
                         jobName = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-1].trim().toLowerCase()
                         currentWs = sh(returnStdout: true, script: 'pwd').trim()
                         env = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-3].trim()
-                        ansiblePlaybook = "${currentWs}/ansible/provision.yaml"
-                        hostsFile = "${currentWs}/private_repo/ansible/inventory/$env/MyJP/hosts"
-                        sh "ansible-playbook -i $hostsFile $ansiblePlaybook -v"
+                        chart_path = "${currentWs}/kubernetes/helm_charts/MyJP/$jobName"
+                        values_file = "${currentWs}/private_repo/ansible/inventory/$env/MyJP/private_values.yaml"
+                        sh "helm upgrade --install $jobName $chart_path --namespace  $djp_namespace --kubeconfig  $kubeconfig_path -f $values_file"
                 }
             }
         }
