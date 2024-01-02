@@ -19,8 +19,9 @@ pipeline {
                 script {
                         jobName = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-1].trim().toLowerCase()
                         currentWs = sh(returnStdout: true, script: 'pwd').trim()
+                        env = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-3].trim()
                         ansiblePlaybook = "${currentWs}/ansible/provision.yaml"
-                        hostsFile = "${currentWs}/private_repo/ansible/inventory/dev/EJP/hosts"
+                        hostsFile = "${currentWs}/private_repo/ansible/inventory/$env/EJP/hosts"
                         sh "ansible-playbook -i $hostsFile $ansiblePlaybook -v"
                 }
             }
