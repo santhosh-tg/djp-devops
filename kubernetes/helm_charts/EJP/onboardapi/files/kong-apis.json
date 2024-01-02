@@ -27,7 +27,7 @@
   ],
   "strip_uri": true,
   "upstream_url": "http://storysakhi-service:8000/v1/query",
-  "uris": "/storysakhi/v1/query"
+  "uris": "/storybot/v1/query"
 },
 {
   "name": "activitySakhiQuery",
@@ -57,7 +57,7 @@
   ],
   "strip_uri": true,
   "upstream_url": "http://activitysakhi-service:8000/v1/query",
-  "uris": "/activitysakhi/v1/query"
+  "uris": "/activitybot/v1/query"
 },
 {
   "name": "sakhiUtilityContext",
@@ -87,7 +87,7 @@
   ],
   "strip_uri": true,
   "upstream_url": "http://sakhiutility-service:8000/v1/context",
-  "uris": "/sakhiutility/v1/context"
+  "uris": "/aiutility/v1/context"
 },
 {
   "name": "sakhiUtilityTranslation",
@@ -117,7 +117,7 @@
   ],
   "strip_uri": true,
   "upstream_url": "http://sakhiutility-service:8000/v1/translation",
-  "uris": "/sakhiutility/v1/translation"
+  "uris": "/aiutility/v1/translation"
 },
 {
   "name": "ivrsMedia",
