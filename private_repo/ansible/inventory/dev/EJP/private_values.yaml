@@ -1,11 +1,10 @@
 #common vars
 namespace:  # kubernetes namespace where the ejp workloads are going to be deployed
-imagepullsecrets:
-dockerhub:
+
 
 #kong vars
-kong_pg_database:  # database name of kong
 kong_pg_host: # Kong postgresql db hostname or ip address
+kong_pg_database:  # database name of kong
 kong_pg_user:  # Kong postgresql db username
 kong_pg_password: # Kong postgresql db password
 
@@ -105,5 +104,9 @@ wa_provider_appname:
 wa_postgres_url: "postgres://USER:PASS@HOST:5432/DBNAME/sslmode=no-verify"
 wa_app_env: "dev"
 wa_app_name: ""
+
+
+dockerhub: hyd.ocir.io/ax2cel5zyviy/ekstep-djp
+
 
 
