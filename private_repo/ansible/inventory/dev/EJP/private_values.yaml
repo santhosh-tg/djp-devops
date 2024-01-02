@@ -9,8 +9,8 @@ kong_pg_user:  # Kong postgresql db username
 kong_pg_password: # Kong postgresql db password
 
 #nginx vars
-domain: # name of the domain to be used to access ejp e.g. ejp.example.org
-dashboard_domain: # domain name to be used for dashboards e.g dashboards.ejp.example.org
+domain: # name of the main domain to be used to access myjp e.g. myjp.example.org
+dashboard_domain: # domain name to be used for dashboards e.g dashboards.myjp.example.org
 core_vault_proxy_site_key: # private key of main domain
   
 core_vault_proxy_site_crt:  # cert of main domain
