@@ -56,10 +56,12 @@ su_oci_access_key:
 su_oci_secret_key: 
 
 # contentservice
-content_postgres_db_username: 
-content_postgres_db_host: 
-content_postgres_db_name:
-content_postgres_db_password:
+content_postgres_db_username:  # content service postgresql db username
+content_postgres_db_host: # postgresql db hostname or ip address
+content_postgres_db_name: # postgresql database name of content service
+content_postgres_db_password: # content service postgresql db password
+content_postgres_ssl_enabled: # postgresql ssl enabled 
+content_postgres_table_name: # content service postgresql table name
 content_config_url: https://ax2cel5zyviy.objectstorage.ap-hyderabad-1.oci.customer-oci.com/n/ax2cel5zyviy/b/sbdjpbotspublic/o/config.json
 
 # ivrs
@@ -90,11 +92,11 @@ adminUser:
 
 
 #telemetryservice
-telemetry_pg_host: 
-telemetry_pg_username: 
-telemetry_pg_password: 
-telemetry_pg_db:
-telemetry_pg_tablename: 
+telemetry_pg_host: # postgresql db hostname or ip address
+telemetry_pg_username: # telemtry service postgresql db username
+telemetry_pg_password: # telemtry service postgresql db password
+telemetry_pg_db: # postgresql database name of telemtry service
+telemetry_pg_tablename: # telemtry service postgresql table name
 
 # whatsapp bot vars
 wa_api_token:
