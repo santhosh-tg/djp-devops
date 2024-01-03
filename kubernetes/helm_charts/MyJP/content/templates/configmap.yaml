@@ -12,3 +12,5 @@ data:
   CONFIG_URL: "{{ .Values.content_config_url }}"
   CONFIG_CACHE_TTL: "{{ .Values.content_config_cache_ttl }}"
   LOG_LEVEL: "{{ .Values.content_log_level }}"
+  SSL_ENABLED: "{{ .Values.content_postgres_ssl_enabled }}"
+  TABLE_NAME: "{{ .Values.content_postgres_table_name }}"
