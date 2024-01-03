@@ -1,0 +1,36 @@
+### Default variable file for telegram_unified_service ###
+namespace: ""
+dockerhub: ""
+
+activity_api_base_url: "http://activitysakhi-service:8000"
+story_api_base_url: "http://storysakhi-service:8000"
+
+ut_repository: "sakhi_telegram_unified_service"
+ut_image_tag: "latest"
+ut_log_level: "INFO"
+ut_telegram_bot_name: ""
+ut_telegram_bot_token: ""
+
+
+replicaCount: 1
+resources:
+  requests:
+    cpu: 100m
+    memory: 100Mi
+  limits:
+    cpu: 1
+    memory: 1024Mi
+network:
+  port: 8000
+  targetport: 8000
+strategy:
+  type: RollingUpdate
+  maxsurge: 25
+  maxunavailable: 25
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 60
+  targetMemoryUtilizationPercentage: ""

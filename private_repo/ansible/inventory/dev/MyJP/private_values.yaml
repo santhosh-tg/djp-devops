@@ -22,44 +22,46 @@ dashboard_vault_proxy_site_crt:  # cert of dashboard domain
 
 #storysakhi vars
 
-ss_open_api_key: 
-ss_bhasini_endpoint_url: 
-ss_bhasini_api_key: 
-ss_oci_endpoint_url: 
-ss_oci_region_name: 
-ss_oci_bucket_name: 
-ss_oci_access_key: 
-ss_oci_secret_key: 
+ss_open_api_key: # Open AI Key used by Story Bot
+ss_bhasini_endpoint_url: # Bhashini end point for language services (text to speech, speech to text and translations)
+ss_bhasini_api_key: # API Key used to connect to Bhashini
+ss_oci_endpoint_url: # The end point for the OCI Object storage which stores the response audio files.
+ss_oci_region_name: # The region name of the OCI Object storage service
+ss_oci_bucket_name: # The bucket name where the file are stored and public url created off
+ss_oci_access_key: # The access key for the OCI storage
+ss_oci_secret_key: # The secret key for the OCI storage
 
 
 # activitysakhi vars
 
-as_open_api_key: 
-as_bhasini_endpoint_url:
-as_bhasini_api_key: 
-as_oci_endpoint_url:
-as_oci_region_name: 
-as_oci_bucket_name: 
-as_oci_access_key: 
-as_oci_secret_key: 
-as_marco_url: 
-marco_index_name: 
+as_open_api_key: # Open AI Key used by Activity Bot
+as_bhasini_endpoint_url: # Bhashini end point for language services (text to speech, speech to text and translations)
+as_bhasini_api_key: # API Key used to connect to Bhashini
+as_oci_endpoint_url: # The end point for the OCI Object storage which stores the response audio files.
+as_oci_region_name: # The region name of the OCI Object storage service
+as_oci_bucket_name: # The bucket name where the file are stored and public url created off
+as_oci_access_key: # The access key for the OCI storage
+as_oci_secret_key: # The secret key for the OCI storage
+as_marco_url: # The Marco database endpoint. Marco keeps the index of knowledge which can be used for similarity search based on user questions
+marco_index_name: # Deprecated. The index name inside the Marco which is used to retrieve the contents
 
 # sakhi utility
-su_open_api_key:
-su_bhasini_endpoint_url:
-su_bhasini_api_key:
-su_oci_endpoint_url:
-su_oci_region_name: 
-su_oci_bucket_name:
-su_oci_access_key: 
-su_oci_secret_key: 
+su_open_api_key: # Open AI Key used by Activity Bot
+su_bhasini_endpoint_url: # Bhashini end point for language services (text to speech, speech to text and translations)
+su_bhasini_api_key: # API Key used to connect to Bhashini
+su_oci_endpoint_url: # The end point for the OCI Object storage which stores the response audio files.
+su_oci_region_name: # The region name of the OCI Object storage service
+su_oci_bucket_name: # The bucket name where the file are stored and public url created off
+su_oci_access_key: # The access key for the OCI storage
+su_oci_secret_key: # The secret key for the OCI storage
 
 # contentservice
-content_postgres_db_username: 
-content_postgres_db_host: 
-content_postgres_db_name:
-content_postgres_db_password:
+content_postgres_db_username:  # content service postgresql db username
+content_postgres_db_host: # postgresql db hostname or ip address
+content_postgres_db_name: # postgresql database name of content service
+content_postgres_db_password: # content service postgresql db password
+content_postgres_ssl_enabled: # postgresql ssl enabled 
+content_postgres_table_name: # content service postgresql table name
 content_config_url: https://ax2cel5zyviy.objectstorage.ap-hyderabad-1.oci.customer-oci.com/n/ax2cel5zyviy/b/sbdjpbotspublic/o/config.json
 
 # ivrs
@@ -90,11 +92,11 @@ adminUser:
 
 
 #telemetryservice
-telemetry_pg_host: 
-telemetry_pg_username: 
-telemetry_pg_password: 
-telemetry_pg_db:
-telemetry_pg_tablename: 
+telemetry_pg_host: # postgresql db hostname or ip address
+telemetry_pg_username: # telemetry service postgresql db username
+telemetry_pg_password: # telemetry service postgresql db password
+telemetry_pg_db: # postgresql database name of telemetry service
+telemetry_pg_tablename: # telemetry service postgresql table name
 
 # whatsapp bot vars
 wa_api_token:
