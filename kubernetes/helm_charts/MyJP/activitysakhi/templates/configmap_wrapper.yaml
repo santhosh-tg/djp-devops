@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: {{ .Chart.Name }}-wrapper-config
-data:
-  botName: {{ .Values.as_botName }}
-  token: {{ .Values.as_token }}
-  audienceType: {{ .Values.as_audience_type }}
-  logLevel: {{ .Values.as_log_level }}
