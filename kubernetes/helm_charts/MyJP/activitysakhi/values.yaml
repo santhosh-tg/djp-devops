@@ -10,6 +10,9 @@ dockerhub: ""
 as_repository: "activity_sakhi_api_service"
 as_image_tag: "latest"
 as_log_level: INFO
+as_openai_baseurl: ""
+as_openai_version: ""
+as_gpt_model: ""
 
 replicaCount: 1
 resources:

@@ -18,7 +18,9 @@ ss_oci_region_name: ""
 ss_oci_bucket_name: ""
 ss_oci_access_key: ""
 ss_oci_secret_key: ""
-
+ss_openai_baseurl: ""
+ss_openai_version: ""
+ss_gpt_model: ""
 
 replicaCount: 1
 resources:

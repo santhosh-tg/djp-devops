@@ -17,3 +17,6 @@ data:
   SERVICE_ENVIRONMENT: "{{ .Values.environment }}"
   TELEMETRY_ENDPOINT_URL: "{{ .Values.telemetry_url }}"
   TELEMETRY_LOG_ENABLED: "{{ .Values.telemetry_log_enabled }}"
+  OPENAI_API_BASE: "{{ .Values.as_openai_baseurl }}"
+  OPENAI_API_VERSION: "{{ .Values.as_openai_version }}"
+  GPT_MODEL: "{{ .Values.as_gpt_model }}"
