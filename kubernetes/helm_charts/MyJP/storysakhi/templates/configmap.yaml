@@ -7,6 +7,7 @@ data:
   LOG_LEVEL: "{{ .Values.ss_log_level }}"
   BHASHINI_ENDPOINT_URL: "{{ .Values.ss_bhasini_endpoint_url }}"
   BHASHINI_API_KEY: "{{ .Values.ss_bhasini_api_key }}"
+  MARQO_URL: "{{ .Values.ss_marqo_url }}"
   OCI_ENDPOINT_URL: "{{ .Values.ss_oci_endpoint_url }}"
   OCI_REGION_NAME: "{{ .Values.ss_oci_region_name }}"
   OCI_BUCKET_NAME: "{{ .Values.ss_oci_bucket_name }}"
