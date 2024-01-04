@@ -6,6 +6,9 @@ content_repository: contentservice
 content_image_tag: latest
 content_config_cache_ttl: "1"
 content_log_level: "warn"
+content_postgres_ssl_enabled: "false"
+content_postgres_table_name: "djp_contents"
+
 
 replicaCount: 1
 resources:

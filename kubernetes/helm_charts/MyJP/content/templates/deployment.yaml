@@ -17,6 +17,8 @@ spec:
       app: {{ .Chart.Name }}
   template:
     metadata:
+      annotations:
+        rollme: {{ randAlphaNum 5 | quote }} #https://github.com/helm/helm/issues/5696
       labels:
         app: {{ .Chart.Name }}
     spec:
