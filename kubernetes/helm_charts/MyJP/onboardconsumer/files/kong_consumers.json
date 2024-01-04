@@ -15,7 +15,8 @@
             "contentSearch"
        ],
         "state": "present",
-        "username": "mobile_app"
+        "username": "mobile_app",
+        "print_credentials": "true"
     },
     {
         "groups": [
