@@ -19,4 +19,5 @@ data:
   OPENAI_API_BASE: "{{ .Values.ss_openai_baseurl }}"
   OPENAI_API_VERSION: "{{ .Values.ss_openai_version }}"
   GPT_MODEL: "{{ .Values.ss_gpt_model }}"
+  DOCS_MIN_SCORE: "{{ .Values.ss_docs_min_score }}"
 
