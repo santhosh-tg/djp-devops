@@ -97,6 +97,9 @@ telemetry_pg_username: # telemetry service postgresql db username
 telemetry_pg_password: # telemetry service postgresql db password
 telemetry_pg_db: # postgresql database name of telemetry service
 telemetry_pg_tablename: # telemetry service postgresql table name
+telemetry_superset_admin_username: # Superset admin username
+telemetry_superset_admin_password: # Superset admin password
+telemetry_superset_host: # Superset host value
 
 # whatsapp bot vars
 wa_api_token:
