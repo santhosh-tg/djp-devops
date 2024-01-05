@@ -12,3 +12,6 @@ data:
   telemetry_local_storage_type: "{{ .Values.telemetry_local_storage_type }}"
   telemetry_environment: "{{ .Values.environment }}"
   telemetry_pg_ssl: "{{ .Values.telemetry_pg_ssl }}"
+  telemetry_superset_admin_username: "{{ .Values.telemetry_superset_admin_username }}"
+  telemetry_superset_admin_password: "{{ .Values.telemetry_superset_admin_password }}"
+  telemetry_superset_host: "{{ .Values.telemetry_superset_host }}"

@@ -16,6 +16,9 @@ telemetry_pg_tablename: ""
 telemetry_dataextract: "true"
 telemetry_local_storage_type: "postgres"
 telemetry_pg_ssl: "false"
+telemetry_superset_admin_username: ""
+telemetry_superset_admin_password: ""
+telemetry_superset_host: ""
 
 replicaCount: 1
 resources:
