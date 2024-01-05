@@ -12,10 +12,12 @@
             "telemetryCreate",
             "configRead",
             "pageSearch",
-            "contentSearch"
+            "contentSearch",
+            "deviceRegister"
+            
        ],
         "state": "present",
-        "username": "mobile_app",
+        "username": "mobile_device",
         "print_credentials": "true"
     },
     {

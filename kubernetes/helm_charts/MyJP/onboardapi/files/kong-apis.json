@@ -26,7 +26,7 @@
     }
   ],
   "strip_uri": true,
-  "upstream_url": "http://storysakhi-service:8000/v1/query",
+  "upstream_url": "http://storysakhi-service:8000/v1/query_rstory",
   "uris": "/storybot/v1/query"
 },
 {
@@ -208,6 +208,36 @@
   "strip_uri": true,
   "upstream_url": "http://adminutil:4000/v1/consumer/mobile_app/credential/register",
   "uris": "/registerMobile"
+},
+{
+  "name": "registerMobileDevice",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "deviceRegister"
+      ],
+      "name": "acl"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://adminutil:4000/v1/consumer/mobile_device/credential/register",
+  "uris": "/registerMobileDevice"
 },
 {
   "name": "contentConfigRead",
