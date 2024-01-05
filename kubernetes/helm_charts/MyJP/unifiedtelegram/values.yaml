@@ -10,7 +10,9 @@ ut_image_tag: "latest"
 ut_log_level: "INFO"
 ut_telegram_bot_name: ""
 ut_telegram_bot_token: ""
-
+ut_concurrent_updates: 50
+ut_pool_timeout: 90
+ut_connection_pool_size: 512
 
 replicaCount: 1
 resources:
