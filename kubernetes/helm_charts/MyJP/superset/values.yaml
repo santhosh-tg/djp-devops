@@ -100,7 +100,7 @@ configOverrides:
       "DASHBOARD_CROSS_FILTERS": True,
       "DASHBOARD_NATIVE_FILTERS_SET": True,
       "ENABLE_TEMPLATE_PROCESSING": True,
-      "EMBEDDED_SUPERSET": true
+      "EMBEDDED_SUPERSET": True
     }
 
   data_cache_config: |
