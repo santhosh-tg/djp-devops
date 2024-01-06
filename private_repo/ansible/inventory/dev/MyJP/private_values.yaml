@@ -30,6 +30,10 @@ ss_oci_region_name: # The region name of the OCI Object storage service
 ss_oci_bucket_name: # The bucket name where the file are stored and public url created off
 ss_oci_access_key: # The access key for the OCI storage
 ss_oci_secret_key: # The secret key for the OCI storage
+ss_openai_baseurl: # The Marco database endpoint. Marco keeps the index of knowledge which can be used for similarity search based on user questions
+ss_openai_version:
+ss_gpt_model:
+ss_marqo_url: 
 
 
 # activitysakhi vars
@@ -44,6 +48,9 @@ as_oci_access_key: # The access key for the OCI storage
 as_oci_secret_key: # The secret key for the OCI storage
 as_marco_url: # The Marco database endpoint. Marco keeps the index of knowledge which can be used for similarity search based on user questions
 marco_index_name: # Deprecated. The index name inside the Marco which is used to retrieve the contents
+as_openai_baseurl:
+as_openai_version:
+as_gpt_model:
 
 # sakhi utility
 su_open_api_key: # Open AI Key used by Activity Bot
@@ -54,6 +61,9 @@ su_oci_region_name: # The region name of the OCI Object storage service
 su_oci_bucket_name: # The bucket name where the file are stored and public url created off
 su_oci_access_key: # The access key for the OCI storage
 su_oci_secret_key: # The secret key for the OCI storage
+su_openai_baseurl:
+su_openai_version:
+su_gpt_model:
 
 # contentservice
 content_postgres_db_username:  # content service postgresql db username
@@ -83,6 +93,7 @@ redis_host:
 redis_port: '6379'
 superset_redis_db_index: '3'
 
+# superset admin user details
 adminUser:
   username:
   firstname:
