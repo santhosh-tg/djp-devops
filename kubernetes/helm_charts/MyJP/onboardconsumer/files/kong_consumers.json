@@ -10,6 +10,7 @@
             "ivrsActivity",
             "appRegister",
             "telemetryCreate",
+            "telemetryMetric",
             "configRead",
             "pageSearch",
             "contentSearch",

@@ -390,6 +390,36 @@
   "uris": "/telemetry/v1/metrics"
 },
 {
+  "name": "telemetryMetric",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "name": "jwt"
+    },
+    {
+      "config.whitelist": [
+        "telemetryMetric"
+      ],
+      "name": "acl"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://telemetry-service:9000/v1/dashboard/token",
+  "uris": "/api/telemetry/v1/dashboard/token"
+},
+{
   "name": "whatsappWebhook",
   "plugins": [
     {
