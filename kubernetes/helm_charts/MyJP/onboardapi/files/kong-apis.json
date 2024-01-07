@@ -390,7 +390,7 @@
   "uris": "/telemetry/v1/metrics"
 },
 {
-  "name": "telemetryMetric",
+  "name": "telemetryDashboard",
   "plugins": [
     {
       "name": "cors"
@@ -417,7 +417,7 @@
   ],
   "strip_uri": true,
   "upstream_url": "http://telemetry-service:9000/v1/dashboard/token",
-  "uris": "/api/telemetry/v1/dashboard/token"
+  "uris": "/telemetry/v1/dashboard/token"
 },
 {
   "name": "whatsappWebhook",
