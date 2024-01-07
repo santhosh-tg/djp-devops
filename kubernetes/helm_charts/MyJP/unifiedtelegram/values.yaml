@@ -1,4 +1,8 @@
 ### Default variable file for telegram_unified_service ###
+environment: "dev"
+telemetry_url: "http://telemetry-service:9001"
+telemetry_log_enabled: "true"
+
 namespace: ""
 dockerhub: ""
 
