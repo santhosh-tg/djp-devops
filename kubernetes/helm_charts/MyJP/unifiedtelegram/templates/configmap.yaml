@@ -11,3 +11,6 @@ data:
   concurrent_updates: "{{ .Values.ut_concurrent_updates }}"
   pool_timeout: "{{ .Values.ut_pool_timeout }}"
   connection_pool_size: "{{ .Values.ut_connection_pool_size }}"
+  SERVICE_ENVIRONMENT: "{{ .Values.environment }}"
+  TELEMETRY_ENDPOINT_URL: "{{ .Values.telemetry_url }}"
+  TELEMETRY_LOG_ENABLED: "{{ .Values.telemetry_log_enabled }}"
