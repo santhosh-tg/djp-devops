@@ -10,6 +10,8 @@ namespace: ""
 imagepullsecrets: ""
 dockerhub: ""
 
+ws_repository: "djp_dashboard"
+ws_image_tag: "latest"
 
 replicaCount: 1
 resources:
@@ -20,8 +22,8 @@ resources:
     cpu: 1
     memory: 1024Mi
 network:
-  port: 8000
-  targetport: 8000
+  port: 8080
+  targetport: 8080
 strategy:
   type: RollingUpdate
   maxsurge: 25
