@@ -23,7 +23,7 @@ resources:
     memory: 1024Mi
 network:
   port: 8080
-  targetport: 8080
+  targetport: 80
 strategy:
   type: RollingUpdate
   maxsurge: 25
