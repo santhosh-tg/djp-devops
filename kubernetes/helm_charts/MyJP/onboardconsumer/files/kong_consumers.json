@@ -10,7 +10,6 @@
             "ivrsActivity",
             "appRegister",
             "telemetryCreate",
-            "telemetryMetric",
             "configRead",
             "pageSearch",
             "contentSearch",
@@ -23,6 +22,13 @@
     },
     {
         "groups": [
+            "telemetryMetric"
+        ],
+        "state": "present",
+        "username": "website_user"
+    }
+    {
+        "groups": [
             "ssQuery",
             "asQuery",
             "telemetryCreate"
@@ -33,7 +39,8 @@
     {
         "groups": [
             "ivrsMedia",
-            "ivrsActivity"
+            "ivrsActivity",
+            "telemetryCreate"
         ],
         "state": "present",
         "username": "exotel_user"

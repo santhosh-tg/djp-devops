@@ -416,7 +416,7 @@
     }
   ],
   "strip_uri": true,
-  "upstream_url": "http://telemetry-service:9000/v1/dashboard/token",
+  "upstream_url": "http://telemetry-service:9001/v1/dashboard/token",
   "uris": "/telemetry/v1/dashboard/token"
 },
 {
