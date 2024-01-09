@@ -22,6 +22,14 @@
     },
     {
         "groups": [
+            "appRegister"
+        ],
+        "state": "present",
+        "username": "mobile_admin",
+        "print_credentials": "true"
+    },
+    {
+        "groups": [
             "telemetryMetric"
         ],
         "state": "present",
