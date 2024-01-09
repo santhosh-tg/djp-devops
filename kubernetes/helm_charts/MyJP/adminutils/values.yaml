@@ -41,7 +41,7 @@ livenessProbe:
 adminutilenv:
   JAVA_OPTS: "-Xms256m -Xmx256m"
   SERVER_PORT: '"4000"'
-  AM_ADMIN_API_ENDPOINT: "http://kong.djp.svc.cluster.local:8001"
+  AM_ADMIN_API_ENDPOINT: "http://kong:8001"
   SPRING_PROFILES_ACTIVE: production
   DEFAULT_CONSUMER_GROUP: contentUser
   ENDPOINTS_HEALTH_ID: apihealth
