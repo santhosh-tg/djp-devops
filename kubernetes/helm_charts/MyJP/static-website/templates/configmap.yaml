@@ -3,7 +3,9 @@ kind: ConfigMap
 metadata:
   name: {{ .Chart.Name }}-config
 data:
-  OPENAI_API_KEY: "{{ .Values.ss_open_api_key }}"
-  LOG_LEVEL: "{{ .Values.ss_log_level }}"
+  HOST: "{{ .Values.sw_telemetry_host }}"
+  SUPERSET_DOMAINS: "{{ Values.sw_superset_domain }}"
+  AUTH_TOKEN: "{{ .Values.sw_superset_token }}"
+  DASHBOARD_IDS: "{{ .Values.sw_dashboard_ids }}"
   
 

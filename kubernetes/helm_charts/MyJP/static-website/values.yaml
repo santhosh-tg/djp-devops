@@ -1,17 +1,14 @@
 ### Default variable file for webstatic-service ###
-environment: "dev"
-telemetry_host: ""
-telemetry_api_token: ""
-superset_host: ""
-dashboard_ids: "" # Array of values
-
-
 namespace: ""
 imagepullsecrets: ""
 dockerhub: ""
 
-ws_repository: "djp_dashboard"
-ws_image_tag: "latest"
+sw_repository: "djp_dashboard"
+sw_image_tag: "latest"
+telemetry_host: "http://telemetry-service:9001/v1"
+superset_api_token: ""
+superset_host: ""
+dashboard_ids: "" # Array of values
 
 replicaCount: 1
 resources:
