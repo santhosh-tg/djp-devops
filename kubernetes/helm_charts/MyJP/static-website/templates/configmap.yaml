@@ -4,7 +4,7 @@ metadata:
   name: {{ .Chart.Name }}-config
 data:
   HOST: "{{ .Values.sw_telemetry_host }}"
-  SUPERSET_DOMAINS: "{{ Values.sw_superset_domain }}"
+  SUPERSET_DOMAINS: "{{ .Values.sw_superset_domain }}"
   AUTH_TOKEN: "{{ .Values.sw_superset_token }}"
   DASHBOARD_IDS: "{{ .Values.sw_dashboard_ids }}"
   
