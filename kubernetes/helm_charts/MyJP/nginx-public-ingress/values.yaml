@@ -45,7 +45,7 @@ nginx_image_tag: "latest"
 pullPolicy: Always
 
 serviceMonitor:
-  enabled: false
+  enabled: true
   labels: # labels with which the prometheus choose the serviceMonitor
     app: prometheus-operator
     release: prometheus-operator
