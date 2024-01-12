@@ -439,7 +439,7 @@
   "strip_uri": true,
   "upstream_url": "http://unifiedtelegram-service:8000/telegram",
   "uris": "/webhook/telegram"
-}
+},
 {
   "name": "whatsappWebhook",
   "plugins": [
