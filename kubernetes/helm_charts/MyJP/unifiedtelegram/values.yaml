@@ -15,7 +15,7 @@ ut_log_level: "INFO"
 ut_telegram_bot_name: ""
 ut_telegram_bot_token: ""
 ut_concurrent_updates: 50
-ut_pool_timeout: 90
+ut_pool_timeout: 30
 ut_connection_pool_size: 512
 ut_supported_languages: en,bn,gu,hi,kn,ml,mr,or,pa,ta,te
 ut_telegram_base_url: ""
@@ -24,13 +24,13 @@ ut_connect_timeout: 300
 ut_read_timeout: 15
 ut_write_time_out: 10
 
-replicaCount: 1
+replicaCount: 10
 resources:
   requests:
     cpu: 100m
     memory: 100Mi
   limits:
-    cpu: 1
+    cpu: 2
     memory: 1024Mi
 network:
   port: 8000
