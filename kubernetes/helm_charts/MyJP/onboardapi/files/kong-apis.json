@@ -9,6 +9,60 @@
       "name": "jwt"
     },
     {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.whitelist": [
         "ssQuery"
       ],
@@ -37,6 +91,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -75,6 +183,60 @@
       "name": "acl"
     },
     {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.hour": 5000,
       "config.limit_by": "credential",
       "config.policy": "local",
@@ -97,6 +259,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -129,6 +345,60 @@
       "name": "jwt"
     },
     {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.whitelist": [
         "ivrsMedia"
       ],
@@ -157,6 +427,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -189,6 +513,60 @@
       "name": "jwt"
     },
     {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.whitelist": [
         "appRegister"
       ],
@@ -217,6 +595,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -249,6 +681,60 @@
       "name": "jwt"
     },
     {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.whitelist": [
         "configRead"
       ],
@@ -277,6 +763,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -309,6 +849,60 @@
       "name": "jwt"
     },
     {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.whitelist": [
         "contentSearch"
       ],
@@ -337,6 +931,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -369,6 +1017,60 @@
       "name": "jwt"
     },
     {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.whitelist": [
         "telemetryMetric"
       ],
@@ -397,6 +1099,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "monitoring-prometheus-statsd-exporter.monitoring.svc.cluster.local",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
