@@ -18,7 +18,7 @@ ut_concurrent_updates: 50
 ut_pool_timeout: 90
 ut_connection_pool_size: 512
 ut_supported_languages: en,bn,gu,hi,kn,ml,mr,or,pa,ta,te
-ut_telegram_base_url: "https://dev.ejp.sunbird.org/api/webhook"
+ut_telegram_base_url: ""
 ut_uvicorn_workers: 4
 ut_connect_timeout: 300
 ut_read_timeout: 15
