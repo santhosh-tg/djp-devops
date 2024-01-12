@@ -420,6 +420,27 @@
   "uris": "/telemetry/v1/dashboard/token"
 },
 {
+  "name": "telegramWebhook",
+  "plugins": [
+    {
+      "name": "cors"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
+      "config.allowed_payload_size": 1,
+      "name": "request-size-limiting"
+    }
+  ],
+  "strip_uri": true,
+  "upstream_url": "http://unifiedtelegram-service:8000/telegram",
+  "uris": "/webhook/telegram"
+}
+{
   "name": "whatsappWebhook",
   "plugins": [
     {
