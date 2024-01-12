@@ -121,6 +121,10 @@ wa_postgres_url: "postgres://USER:PASS@HOST:5432/DBNAME/sslmode=no-verify"
 wa_app_env: "dev"
 wa_app_name: ""
 
+# unified telegram bot vars
+ut_telegram_bot_name: # This will be the bot name that is created using BotFather
+ut_telegram_bot_token: # This will be the bot token that is created using BotFather
+ut_telegram_base_url: # This will be call back end point for Telegram Webhook
 
 dockerhub: hyd.ocir.io/ax2cel5zyviy/ekstep-djp
 
