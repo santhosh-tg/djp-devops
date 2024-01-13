@@ -23,6 +23,9 @@ ut_uvicorn_workers: 4
 ut_connect_timeout: 300
 ut_read_timeout: 15
 ut_write_time_out: 10
+ut_redis_host: ""
+ut_redis_port: 6379
+ut_redis_index: 1
 
 replicaCount: 10
 resources:
