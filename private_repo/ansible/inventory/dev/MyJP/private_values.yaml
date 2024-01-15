@@ -125,6 +125,7 @@ wa_app_name: ""
 ut_telegram_bot_name: # This will be the bot name that is created using BotFather
 ut_telegram_bot_token: # This will be the bot token that is created using BotFather
 ut_telegram_base_url: # This will be call back end point for Telegram Webhook
+ut_redis_host: # This is the redis host name. Crosscheck the ut_redis_port (defaulted to 6379) and ut_redis_index (defaulted to 1 i.e; the DB number) in values.yaml
 
 dockerhub: hyd.ocir.io/ax2cel5zyviy/ekstep-djp
 
