@@ -1,27 +1,44 @@
-# DJP Script
+# DJP Content Preparation Script
 
-Script to fetch url and other details for Diksga and youtube content.
+DJP Content Service provides content details for the DJP Mobile App to access and play. The content metadata and source links (URLs) are stored in a database from which the Content Service provides the details.
 
-## About this script
-This script is written for reading a input csv file line by line and based on the certian criteria (whethere it is Diksha or youtube content), 
- - Fetch the records form Diksha and populate url specific data into output csv file.
- - Identify the youtube id and populate the data into output file.
+To upload content details to the database, following is the process:
+1. Get the content details in a CSV file
+2. Modify the csv to add Youtube content ids
+3. Run the content preparation script to add content metadata for contents on DIKSHA. It generates an output csv
+4. Import the output csv to database
 
-### Sample csv file
-	In the sample-csv folder there are two files: input-file.csv and output-file.csv. Refer these files for details.
-	
-	For Diksha content thumbnail, description, mimetype, url and media specific detaisl are populated. Remaining data are populated form input-file only.
+## Step 1: Get the content details in a CSV file
+The content will need to be shared in the following format: [Click Here](https://raw.githubusercontent.com/DJP-Digital-Jaaduii-Pitara/djp-devops/release-1.0.0/scripts/script-djp/sample-csv/input-file.csv)
 
-	For youtube content, id can be fetch from a specifci forlmula (give below) and populated into column number: C (identifier).
-	=IF(ISNUMBER(SEARCH("v=", B3)), MID(B3, SEARCH("v=", B3)+2, 11), IF(ISNUMBER(FIND(".be/", B3)), MID(B3, FIND(".be/", B3)+4, 11), IF(ISNUMBER(FIND("/shorts/", B3)), MID(B3, FIND("/shorts/", B3)+LEN("/shorts/"), 11), IF(ISNUMBER(FIND("youtu.be/", B3)), MID(B3, FIND("youtu.be/", B3)+LEN("youtu.be/"), 11), ""))))
-	Youtube contents data are populated from the input-file only. 
+Make sure the input csv is in the required format
 
-### Command to execute:
-	- Go to the script root folder.
-	For building the script:
-		mvn clean install
+## Step 2: Modify the CSV to add Youtube content ids (please make sure if these steps are correct)
+1. Add a new column as third column with name "identifier) (in the first row).
+2. Add the following formula to all the rows in that column:
+```
+=IF(ISNUMBER(SEARCH("v=", B3)), MID(B3, SEARCH("v=", B3)+2, 11), IF(ISNUMBER(FIND(".be/", B3)), MID(B3, FIND(".be/", B3)+4, 11), IF(ISNUMBER(FIND("/shorts/", B3)), MID(B3, FIND("/shorts/", B3)+LEN("/shorts/"), 11), IF(ISNUMBER(FIND("youtu.be/", B3)), MID(B3, FIND("youtu.be/", B3)+LEN("youtu.be/"), 11), ""))))
+```
+3. The above will extract the youtube content id from the given URL and populate it in the column.
 
-	For executing: 
+## Step 3: Run the content preparation script to add content metadata for contents on DIKSHA. It generates an output csv
+1. Run the following command:
+    - Go to the script root folder.
+	- For building the script:
+
+		```mvn clean install```
+
+	- For executing:
+
+		```
 		mvn exec:java -Dexec.mainClass="com.script.djp.script_djp.App" -Dexec.args="<local path for input-file.csv> <local path for output-file.csv>"
-
 		mvn exec:java -Dexec.mainClass="com.script.djp.script_djp.App" -Dexec.args="/Users/Documents/input-fiel.csv /Users/Documents/output-fiel.csv"
+		```
+2. The output will be in the following format: [Click Here](https://raw.githubusercontent.com/DJP-Digital-Jaaduii-Pitara/djp-devops/release-1.0.0/scripts/script-djp/sample-csv/output-file.csv)
+
+## 4: Import the final CSV to database
+Log in to the PostgreSQL instance for the contentdb database using the psql client as the admin user, and execute the following command to import data.
+```
+\copy djp_contents FROM '/path/to/csv/file.csv' DELIMITER ',' CSV HEADER;
+UPDATE djp_contents SET status = 'Live';
+```
