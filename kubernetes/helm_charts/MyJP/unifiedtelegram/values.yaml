@@ -14,15 +14,18 @@ ut_image_tag: "latest"
 ut_log_level: "INFO"
 ut_telegram_bot_name: ""
 ut_telegram_bot_token: ""
-ut_concurrent_updates: 50
+ut_concurrent_updates: 500
 ut_pool_timeout: 30
-ut_connection_pool_size: 512
+ut_connection_pool_size: 1000
 ut_supported_languages: en,bn,gu,hi,kn,ml,mr,or,pa,ta,te
 ut_telegram_base_url: ""
 ut_uvicorn_workers: 4
 ut_connect_timeout: 300
 ut_read_timeout: 15
 ut_write_time_out: 10
+ut_redis_host: ""
+ut_redis_port: 6379
+ut_redis_index: 1
 
 replicaCount: 10
 resources:

@@ -20,3 +20,6 @@ data:
   connect_timeout: "{{ .Values.ut_connect_timeout }}"
   read_timeout: "{{ .Values.ut_read_timeout }}"
   write_time_out: "{{ .Values.ut_write_time_out }}"
+  REDIS_HOST: "{{ .Values.ut_redis_host }}"
+  REDIS_PORT: "{{ .Values.ut_redis_port }}"
+  REDIS_INDEX: "{{ .Values.ut_redis_index }}"
