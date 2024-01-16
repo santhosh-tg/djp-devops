@@ -47,5 +47,4 @@ pullPolicy: Always
 serviceMonitor:
   enabled: true
   labels: # labels with which the prometheus choose the serviceMonitor
-    app: prometheus-operator
-    release: prometheus-operator
+    release: monitoring
