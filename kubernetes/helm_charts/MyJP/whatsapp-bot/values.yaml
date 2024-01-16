@@ -12,6 +12,7 @@ wa_activity_sakhi_endpoint_url: "http://activitysakhi-service:8000/v1/query"
 wa_char_limit: "1024"
 wa_telemetry_service_url: "http://telemetry-service:9001/v1/telemetry"
 wa_port: "3010"
+wa_log_level: "info"
 
 replicaCount: 1
 resources:

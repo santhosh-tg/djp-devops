@@ -16,4 +16,5 @@ data:
   WA_PROVIDER_NUMBER: "{{ .Values.wa_provider_number }}"
   WA_PROVIDER_APPNAME: "{{ .Values.wa_provider_appname }}"
   POSTGRES_URL: "{{ .Values.wa_postgres_url }}"
+  LOG_LEVEL: "{{ .Values.wa_log_level }}"
 
