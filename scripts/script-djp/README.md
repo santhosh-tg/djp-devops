@@ -23,18 +23,18 @@ Make sure the input csv is in the required format
 
 ## Step 3: Run the content preparation script to add content metadata for contents on DIKSHA. It generates an output csv
 1. Run the following command:
-    - Go to the script root folder.
-	- For building the script:
+    - Go to the script root folder & run below command to build the script.
+      
+	```mvn clean install```
+    - For executing:
 
-		```mvn clean install```
+	```
+	mvn exec:java -Dexec.mainClass="com.script.djp.script_djp.App" -Dexec.args="<local path for input-file.csv> <local path for output-file.csv>"
 
-	- For executing:
-
-		```
-		mvn exec:java -Dexec.mainClass="com.script.djp.script_djp.App" -Dexec.args="<local path for input-file.csv> <local path for output-file.csv>"
-		mvn exec:java -Dexec.mainClass="com.script.djp.script_djp.App" -Dexec.args="/Users/Documents/input-fiel.csv /Users/Documents/output-fiel.csv"
-		```
-2. The output will be in the following format: [Click Here](https://raw.githubusercontent.com/DJP-Digital-Jaaduii-Pitara/djp-devops/release-1.0.0/scripts/script-djp/sample-csv/output-file.csv)
+	sample: 
+	mvn exec:java -Dexec.mainClass="com.script.djp.script_djp.App" -Dexec.args="/Users/Documents/input-fiel.csv /Users/Documents/output-fiel.csv"
+	```
+3. The output will be in the following format: [Click Here](https://raw.githubusercontent.com/DJP-Digital-Jaaduii-Pitara/djp-devops/release-1.0.0/scripts/script-djp/sample-csv/output-file.csv)
 
 ## 4: Import the final CSV to database
 Log in to the PostgreSQL instance for the contentdb database using the psql client as the admin user, and execute the following command to import data.
