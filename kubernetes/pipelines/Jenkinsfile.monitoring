@@ -23,6 +23,7 @@ pipeline {
                         chart_path = "${currentWs}/kubernetes/helm_charts/MyJP/$jobName"
                         values_file = "${currentWs}/private_repo/ansible/inventory/$env/MyJP/private_values.yaml"
                         sh "helm upgrade --install prometheus-operator $chart_path/prometheus-operator --namespace monitoring --kubeconfig  $kubeconfig_path -f $values_file"
+                        sh "helm upgrade --install nginx-exporter $chart_path/prometheus-nginx-exporter --namespace monitoring --kubeconfig  $kubeconfig_path -f $values_file"
                         sh "helm upgrade --install statsd-exporter $chart_path/statsd-exporter --namespace $djp_namespace --kubeconfig  $kubeconfig_path -f $values_file"
 
                 }
