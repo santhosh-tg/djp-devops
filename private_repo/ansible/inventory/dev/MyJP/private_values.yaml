@@ -46,8 +46,7 @@ as_oci_region_name: # The region name of the OCI Object storage service
 as_oci_bucket_name: # The bucket name where the file are stored and public url created off
 as_oci_access_key: # The access key for the OCI storage
 as_oci_secret_key: # The secret key for the OCI storage
-as_marco_url: # The Marco database endpoint. Marco keeps the index of knowledge which can be used for similarity search based on user questions
-marco_index_name: # Deprecated. The index name inside the Marco which is used to retrieve the contents
+as_marqo_url: # The Marco database endpoint. Marco keeps the index of knowledge which can be used for similarity search based on user questions
 as_openai_baseurl:
 as_openai_version:
 as_gpt_model:
