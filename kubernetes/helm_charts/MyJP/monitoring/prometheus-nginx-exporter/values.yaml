@@ -84,7 +84,7 @@ resources: {}
 
 serviceMonitor:
   # When set true then use a ServiceMonitor to configure scraping
-  enabled: false
+  enabled: true
   # Set the namespace the ServiceMonitor should be deployed
   namespace: ""
   # Set how frequently Prometheus should scrape
