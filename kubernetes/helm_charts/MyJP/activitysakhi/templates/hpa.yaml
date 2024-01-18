@@ -1,4 +1,4 @@
-{{- if .Values.activityAutoscaling.enabled }}
+{{- if .Values.activityConfig.autoscaleEnabled }}
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
