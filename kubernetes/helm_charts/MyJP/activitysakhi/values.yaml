@@ -34,8 +34,9 @@ strategy:
 
 #{{ activitysakhi_liveness_readiness | to_nice_yaml }}
 
-activityAutoscaling:
-  enabled: false
+activityConfig:
+  replicaCount: 1
+  autoscaleEnabled: false
   minReplicas: 1
   maxReplicas: 2
   targetCPUUtilizationPercentage: 60
