@@ -9,8 +9,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: {{ .Chart.Name }}
-  minReplicas: {{ .Values.autoscaling.minReplicas }}
-  maxReplicas: {{ .Values.autoscaling.maxReplicas }}
+  minReplicas: {{ .Values.activityAutoscaling.minReplicas }}
+  maxReplicas: {{ .Values.activityAutoscaling.maxReplicas }}
   metrics:
     {{- if .Values.autoscaling.targetCPUUtilizationPercentage }}
     - type: Resource

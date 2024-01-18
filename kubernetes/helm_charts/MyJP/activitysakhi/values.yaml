@@ -13,7 +13,7 @@ as_log_level: INFO
 as_openai_baseurl: ""
 as_openai_version: ""
 as_gpt_model: ""
-
+activity_replica_count: 1
 resources:
   requests:
     cpu: 100m
@@ -34,7 +34,7 @@ strategy:
 
 #{{ activitysakhi_liveness_readiness | to_nice_yaml }}
 
-autoscaling:
+activityAutoscaling:
   enabled: false
   minReplicas: 1
   maxReplicas: 2
