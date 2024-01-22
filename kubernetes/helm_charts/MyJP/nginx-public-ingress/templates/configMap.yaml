@@ -111,8 +111,7 @@ data:
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        set $target http://prometheus-operator-grafana.monitoring.svc.cluster.local;
-        proxy_pass $target;
+        proxy_pass http://prometheus-operator-grafana.monitoring.svc.cluster.local;
       }
 {{- end }}
 
