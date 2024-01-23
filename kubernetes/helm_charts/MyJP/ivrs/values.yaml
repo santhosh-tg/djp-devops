@@ -22,7 +22,7 @@ strategy:
   maxunavailable: 25
 
 ivrs_config_url: ""
-ivrs_telemetry_api_url: ""
+ivrs_telemetry_api_url: "http://telemetry-service:9001/v1/telemetry"
 ivrs_env: "dev"
 autoscaling:
   enabled: false
