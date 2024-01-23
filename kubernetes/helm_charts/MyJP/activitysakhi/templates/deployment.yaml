@@ -34,7 +34,7 @@ spec:
         - configMapRef:
             name: {{ .Chart.Name }}-config
         resources:
-{{ toYaml .Values.resources | indent 10 }}
+{{ toYaml .Values.activityConfig.resources | indent 10 }}
         ports:
         - containerPort: {{ .Values.network.port }}
         # {{- if .Values.healthcheck }}

@@ -13,14 +13,7 @@ as_log_level: INFO
 as_openai_baseurl: ""
 as_openai_version: ""
 as_gpt_model: ""
-activity_replica_count: 1
-resources:
-  requests:
-    cpu: 100m
-    memory: 100Mi
-  limits:
-    cpu: 1
-    memory: 1024Mi
+
 network:
   port: 8000
   targetport: 8000
@@ -41,3 +34,10 @@ activityConfig:
   maxReplicas: 2
   targetCPUUtilizationPercentage: 60
   targetMemoryUtilizationPercentage: 
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 1
+      memory: 1024Mi
