@@ -20,14 +20,6 @@ telemetry_superset_admin_username: ""
 telemetry_superset_admin_password: ""
 telemetry_superset_host: ""
 
-replicaCount: 1
-resources:
-  requests:
-    cpu: 100m
-    memory: 100Mi
-  limits:
-    cpu: 1
-    memory: 1024Mi
 network:
   port: 9001
   targetport: 9001
@@ -55,9 +47,17 @@ telemetry_liveness_readiness:
     timeoutSeconds: 5
     failureThreshold: 2
 
-autoscaling:
-  enabled: false
+telemetryConfig:
+  replicaCount: 1
+  autoscaleEnabled: false
   minReplicas: 1
   maxReplicas: 2
   targetCPUUtilizationPercentage: 60
   targetMemoryUtilizationPercentage: ""
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 1
+      memory: 1024Mi

@@ -23,14 +23,6 @@ su_openai_baseurl: ""
 su_openai_version: ""
 su_gpt_model: ""
 
-replicaCount: 1
-resources:
-  requests:
-    cpu: 100m
-    memory: 100Mi
-  limits:
-    cpu: 1
-    memory: 1024Mi
 network:
   port: 8000
   targetport: 8000
@@ -41,9 +33,17 @@ strategy:
 
 #{{ storysakhi_liveness_readiness | to_nice_yaml }}
 
-autoscaling:
-  enabled: false
+sakhiutilityConfig:
+  replicaCount: 1
+  autoscaleEnabled: false
   minReplicas: 1
   maxReplicas: 2
   targetCPUUtilizationPercentage: 60
   targetMemoryUtilizationPercentage: ""
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 1
+      memory: 1024Mi

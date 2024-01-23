@@ -6,13 +6,6 @@ dockerhub: hyd.ocir.io/ax2cel5zyviy/ekstep-djp
 replicaCount: 1
 repository: "adminutil"
 image_tag: "release-4.5.0_RC3_68b1eaa_1"
-resources:
-  requests:
-    cpu: 100m
-    memory: 100Mi
-  limits:
-    cpu: 1000m
-    memory: 1024Mi
 network:
   port: 4000
   targetport: 4000
@@ -73,9 +66,17 @@ adminutilenv:
   LEARNER_BASE_API_URL: '"http://kong:8000"'
   EMBED_ROLE: '"true"'
   LEARNER_API_AUTH_KEY: '""'
-autoscaling:
-  enabled: false
+adminutilConfig:
+  replicaCount: 1
+  autoscaleEnabled: false
   minReplicas: 1
   maxReplicas: 2
   targetCPUUtilizationPercentage: 60
   targetMemoryUtilizationPercentage: 60
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 1
+      memory: 1024Mi

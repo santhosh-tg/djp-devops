@@ -14,14 +14,6 @@ wa_telemetry_service_url: "http://telemetry-service:9001/v1/telemetry"
 wa_port: "3010"
 wa_log_level: "info"
 
-replicaCount: 1
-resources:
-  requests:
-    cpu: 100m
-    memory: 100Mi
-  limits:
-    cpu: 1
-    memory: 1024Mi
 network:
   port: 3010
   targetport: 3010
@@ -31,13 +23,6 @@ strategy:
   maxunavailable: 25
 
 #{{ whatsappbot_liveness_readiness | to_nice_yaml }}
-
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 2
-  targetCPUUtilizationPercentage: 60
-  targetMemoryUtilizationPercentage: ""
 
 wa_story_sakhi_endpoint_url: ""
 wa_activity_sakhi_endpoint_url: ""
@@ -53,3 +38,18 @@ wa_provider_appname: "TestDJP"
 wa_app_env: "dev"
 wa_app_name: "djp"
 wa_postgres_url: ""
+
+whatsappConfig:
+  replicaCount: 1
+  autoscaleEnabled: false
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 60
+  targetMemoryUtilizationPercentage: ""
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 1
+      memory: 1024Mi
