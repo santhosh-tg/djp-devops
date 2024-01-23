@@ -9,6 +9,60 @@
       "name": "jwt"
     },
     {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.whitelist": [
         "ssQuery"
       ],
@@ -37,6 +91,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -75,6 +183,60 @@
       "name": "acl"
     },
     {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.hour": 5000,
       "config.limit_by": "credential",
       "config.policy": "local",
@@ -97,6 +259,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -126,6 +342,66 @@
       "name": "cors"
     },
     {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
+    },
+    {
       "config.allowed_payload_size": 1,
       "name": "request-size-limiting"
     }
@@ -139,6 +415,66 @@
   "plugins": [
     {
       "name": "cors"
+    },
+    {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
+      "config.hour": 5000,
+      "config.limit_by": "credential",
+      "config.policy": "local",
+      "name": "rate-limiting"
     },
     {
       "config.allowed_payload_size": 1,
@@ -157,6 +493,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -189,6 +579,60 @@
       "name": "jwt"
     },
     {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.whitelist": [
         "deviceRegister"
       ],
@@ -217,6 +661,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -249,6 +747,60 @@
       "name": "jwt"
     },
     {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.whitelist": [
         "pageSearch"
       ],
@@ -277,6 +829,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -309,6 +915,60 @@
       "name": "jwt"
     },
     {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.whitelist": [
         "telemetryCreate"
       ],
@@ -337,6 +997,60 @@
     },
     {
       "name": "jwt"
+    },
+    {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.whitelist": [
@@ -369,6 +1083,60 @@
       "name": "jwt"
     },
     {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.whitelist": [
         "telemetryMetric"
       ],
@@ -396,6 +1164,60 @@
       "name": "cors"
     },
     {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
+    },
+    {
       "config.hour": 5000,
       "config.limit_by": "credential",
       "config.policy": "local",
@@ -415,6 +1237,60 @@
   "plugins": [
     {
       "name": "cors"
+    },
+    {
+      "config.host": "statsd-service",
+      "config.metrics": [
+        {
+          "name": "request_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "request_size",
+          "stat_type": "timer"
+        },
+        {
+          "name": "status_count",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "response_size",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "unique_users",
+          "stat_type": "set"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "request_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        },
+        {
+          "name": "upstream_latency",
+          "stat_type": "timer"
+        },
+        {
+          "name": "kong_latency",
+          "stat_type": "timer"
+        },
+        {
+          "consumer_identifier": "username",
+          "name": "status_count_per_user",
+          "sample_rate": 1,
+          "stat_type": "counter"
+        }
+      ],
+      "config.port": 9125,
+      "name": "statsd"
     },
     {
       "config.hour": 5000,
