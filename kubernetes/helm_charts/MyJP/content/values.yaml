@@ -9,15 +9,6 @@ content_log_level: "warn"
 content_postgres_ssl_enabled: "false"
 content_postgres_table_name: "djp_contents"
 
-
-replicaCount: 1
-resources:
-  requests:
-    cpu: 100m
-    memory: 100Mi
-  limits:
-    cpu: 1
-    memory: 1024Mi
 network:
   port: 3000
   targetport: 3000
@@ -26,9 +17,17 @@ strategy:
   maxsurge: 25
   maxunavailable: 25
 
-autoscaling:
-  enabled: false
+contentConfig:
+  replicaCount: 1
+  autoscaleEnabled: false
   minReplicas: 1
   maxReplicas: 2
   targetCPUUtilizationPercentage: 60
-  targetMemoryUtilizationPercentage: ""
+  targetMemoryUtilizationPercentage: 60
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 1
+      memory: 1024Mi

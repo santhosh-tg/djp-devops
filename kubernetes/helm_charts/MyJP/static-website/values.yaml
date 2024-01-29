@@ -10,14 +10,6 @@ superset_api_token: ""
 superset_host: ""
 dashboard_ids: "" # Array of values
 
-replicaCount: 1
-resources:
-  requests:
-    cpu: 100m
-    memory: 100Mi
-  limits:
-    cpu: 1
-    memory: 1024Mi
 network:
   port: 80
   targetport: 8080
@@ -27,9 +19,17 @@ strategy:
   maxunavailable: 25
 
 
-autoscaling:
-  enabled: false
+sakhiutilityConfig:
+  replicaCount: 1
+  autoscaleEnabled: false
   minReplicas: 1
   maxReplicas: 2
   targetCPUUtilizationPercentage: 60
   targetMemoryUtilizationPercentage: ""
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 1
+      memory: 1024Mi

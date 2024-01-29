@@ -7,7 +7,7 @@ metadata:
   annotations:
     reloader.stakater.com/auto: "true"
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.sakhiutilityConfig.replicaCount }}
   strategy:
      rollingUpdate:
         maxSurge: {{ .Values.strategy.maxsurge }}
@@ -34,7 +34,7 @@ spec:
         - configMapRef:
             name: {{ .Chart.Name }}-config
         resources:
-{{ toYaml .Values.resources | indent 10 }}
+{{ toYaml .Values.sakhiutilityConfig.resources | indent 10 }}
         ports:
         - containerPort: {{ .Values.network.port }}
         # {{- if .Values.healthcheck }}

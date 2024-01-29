@@ -14,13 +14,6 @@ as_openai_baseurl: ""
 as_openai_version: ""
 as_gpt_model: ""
 
-resources:
-  requests:
-    cpu: 100m
-    memory: 100Mi
-  limits:
-    cpu: 1
-    memory: 1024Mi
 network:
   port: 8000
   targetport: 8000
@@ -34,9 +27,17 @@ strategy:
 
 #{{ activitysakhi_liveness_readiness | to_nice_yaml }}
 
-autoscaling:
-  enabled: false
+activityConfig:
+  replicaCount: 1
+  autoscaleEnabled: false
   minReplicas: 1
   maxReplicas: 2
   targetCPUUtilizationPercentage: 60
   targetMemoryUtilizationPercentage: 
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 1
+      memory: 1024Mi
