@@ -19,7 +19,7 @@ strategy:
   maxunavailable: 25
 
 
-sakhiutilityConfig:
+staticwebsiteConfig:
   replicaCount: 1
   autoscaleEnabled: false
   minReplicas: 1
