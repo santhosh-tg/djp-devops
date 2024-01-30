@@ -90,7 +90,6 @@ data:
       ignore_invalid_headers off;
 
       location / {
-        rewrite ^/(.*) /$1 break;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Scheme $scheme;
@@ -101,7 +100,7 @@ data:
         proxy_set_header Connection "";
         proxy_http_version 1.1;
         proxy_set_header X-Request-ID $sb_request_id;
-        proxy_pass http://static-website-service:8080;
+        return 302 https://diksha.gov.in/jadoo/index.html
       }
 
 {{- if .Values.grafana.proxyenabled }}
@@ -116,7 +115,6 @@ data:
 {{- end }}
 
     location /dashboard {
-        rewrite ^/(.*) /$1 break;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Scheme $scheme;
