@@ -42,9 +42,10 @@ data:
       limit_conn limitbyaddr 400;
       return 301 https://{{ .Values.domain }}$request_uri;
       }
-      
+
       server {
       listen                443 ssl;
+      add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
       ssl_certificate       /etc/secrets/tls.crt;
       ssl_certificate_key   /etc/secrets/tls.key;
       ssl_protocols TLSv1.2 TLSv1.3;
